@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://world_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Jerry/Jerry.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://ASSETS/background/j1.png" type="Texture" id=8]
 [ext_resource path="res://Area2D.gd" type="Script" id=9]
 [ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ASSETS/fonts/Alkalami-Regular.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://HUD.gd" type="Script" id=12]
+[ext_resource path="res://ASSETS/coins/coin1.png" type="Texture" id=13]
 [ext_resource path="res://ASSETS/WorldTiles/tileYellow_04.png" type="Texture" id=14]
 
 [sub_resource type="TileSet" id=1]
@@ -31,6 +34,22 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 3339.25, 91.5 )
 
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.819608, 0.6, 1, 0.286275 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+outline_color = Color( 0.713726, 0.368627, 1, 1 )
+font_data = ExtResource( 11 )
+
 [node name="Level1" type="Node2D"]
 
 [node name="Tile unsolid" type="TileMap" parent="."]
@@ -49,6 +68,7 @@ tile_data = PoolIntArray( -1048547, 9, 0, -1048546, 2, 0, -1048545, 2, 0, -10485
 
 [node name="Jerry" parent="." instance=ExtResource( 2 )]
 position = Vector2( 296, 488 )
+collision_mask = 31
 __meta__ = {
 "_edit_group_": true
 }
@@ -99,7 +119,7 @@ motion_scale = Vector2( 0.64, 0.64 )
 motion_mirroring = Vector2( 2700, 1800 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Jungle 3"]
-position = Vector2( -408, -1112 )
+position = Vector2( -415, -1115 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 6 )
 centered = false
@@ -124,15 +144,6 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 8 )
 centered = false
 
-[node name="Coin2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2080, 216 )
-
-[node name="Coin3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2592, -1064 )
-
-[node name="Coin" parent="." instance=ExtResource( 10 )]
-position = Vector2( 576, 280 )
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 3336, 976 )
 collision_layer = 4
@@ -145,4 +156,62 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
 
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 12 )
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 8.0
+margin_top = 9.0
+margin_right = 258.0
+margin_bottom = 131.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+margin_left = 13.0
+margin_top = -9.0
+margin_right = 116.0
+margin_bottom = 115.0
+texture = ExtResource( 13 )
+expand = true
+
+[node name="Label" type="Label" parent="HUD"]
+anchor_left = 0.105
+anchor_top = 0.102
+anchor_right = 0.105
+anchor_bottom = 0.102
+margin_left = -6.40001
+margin_top = -37.6
+margin_right = 24.6
+margin_bottom = 39.4
+custom_colors/font_color = Color( 0.462745, 0.156863, 0.713726, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "X"
+
+[node name="Coins" type="Label" parent="HUD"]
+anchor_left = 0.105
+anchor_top = 0.102
+anchor_right = 0.105
+anchor_bottom = 0.102
+margin_left = 43.6
+margin_top = -59.6
+margin_right = 92.6
+margin_bottom = 73.4
+custom_colors/font_color = Color( 0.462745, 0.156863, 0.713726, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "X"
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 576, 280 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 576, 88 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 10 )]
+position = Vector2( 2080, 216 )
+
 [connection signal="body_entered" from="Area2D" to="Jerry" method="_on_Area2D_body_entered"]
+[connection signal="coin_collected" from="Coins/Coin" to="HUD" method="_on_Coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_Coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_Coin_coin_collected"]

@@ -1,0 +1,148 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://world_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Jerry/Jerry.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ASSETS/background/sea.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/background/jg4.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/background/jg5.png" type="Texture" id=5]
+[ext_resource path="res://ASSETS/background/jg3.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/background/j2.png" type="Texture" id=7]
+[ext_resource path="res://ASSETS/background/j1.png" type="Texture" id=8]
+[ext_resource path="res://Area2D.gd" type="Script" id=9]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ASSETS/WorldTiles/tileYellow_04.png" type="Texture" id=14]
+
+[sub_resource type="TileSet" id=1]
+0/name = "tileYellow_04.png 0"
+0/texture = ExtResource( 14 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3339.25, 91.5 )
+
+[node name="Level1" type="Node2D"]
+
+[node name="Tile unsolid" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+collision_layer = 2
+collision_mask = 51
+format = 1
+tile_data = PoolIntArray( 65567, 0, 0, 65568, 0, 0, 65569, 0, 0, 65570, 0, 0, 65571, 0, 0, 65572, 0, 0, 65573, 0, 0, 131103, 0, 0, 131104, 0, 0, 131105, 0, 0, 131106, 0, 0, 131107, 0, 0, 131108, 0, 0, 131109, 0, 0, 196639, 0, 0, 196640, 0, 0, 196641, 0, 0, 196642, 0, 0, 196643, 0, 0, 196644, 0, 0, 196645, 0, 0, 262175, 0, 0, 262176, 0, 0, 262177, 0, 0, 262178, 0, 0, 262179, 0, 0, 262180, 0, 0, 262181, 0, 0, 327711, 0, 0, 327712, 0, 0, 327713, 0, 0, 327714, 0, 0, 327715, 0, 0, 327716, 0, 0, 327717, 0, 0, 393247, 0, 0, 393248, 0, 0, 393249, 0, 0, 393250, 0, 0, 393251, 0, 0, 393252, 0, 0, 393253, 0, 0, 458783, 0, 0, 458784, 0, 0, 458785, 0, 0, 458786, 0, 0, 458787, 0, 0, 458788, 0, 0, 458789, 0, 0 )
+
+[node name="Tiles Solid" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+collision_layer = 2
+collision_mask = 51
+format = 1
+tile_data = PoolIntArray( -1048547, 9, 0, -1048546, 2, 0, -1048545, 2, 0, -1048544, 2, 0, -1048543, 2, 0, -1048542, 2, 0, -1048541, 2, 0, -1048540, 2, 0, -1048539, 2, 0, -1048538, 2, 0, -1048537, 2, 0, -1048536, 10, 0, -851961, 9, 0, -851960, 2, 0, -851959, 2, 0, -851958, 2, 0, -851957, 2, 0, -851956, 2, 0, -851955, 2, 0, -851954, 2, 0, -851953, 2, 0, -851952, 2, 0, -851951, 2, 0, -851950, 2, 0, -851949, 2, 0, -851948, 2, 0, -851947, 2, 0, -851946, 2, 0, -851945, 2, 0, -851944, 2, 0, -851943, 2, 0, -851942, 2, 0, -851941, 2, 0, -851940, 2, 0, -851939, 10, 0, -655353, 9, 0, -655352, 2, 0, -655351, 2, 0, -655350, 10, 0, -458745, 9, 0, -458744, 2, 0, -458743, 2, 0, -458742, 10, 0, -262137, 9, 0, -262136, 2, 0, -262135, 2, 0, -262134, 10, 0, -131079, 0, 0, -65543, 0, 0, -131031, 9, 0, -131030, 2, 0, -131029, 2, 0, -131028, 2, 0, -131027, 10, 0, -7, 0, 0, -65529, 9, 0, -65528, 2, 0, -65527, 2, 0, -65526, 10, 0, 65529, 0, 0, 31, 1, 0, 32, 2, 0, 33, 2, 0, 34, 2, 0, 35, 2, 0, 36, 2, 0, 37, 3, 0, 131065, 0, 0, 196601, 0, 0, 131079, 9, 0, 131080, 2, 0, 131081, 2, 0, 131082, 10, 0, 262137, 0, 0, 327673, 0, 0, 262176, 4, 0, 262180, 4, 0, 393209, 0, 0, 327687, 9, 0, 327688, 2, 0, 327689, 2, 0, 327690, 10, 0, 458745, 0, 0, 458746, 6, 0, 393238, 9, 0, 393239, 2, 0, 393240, 2, 0, 393241, 2, 0, 393242, 10, 0, 524281, 0, 0, 524282, 12, 0, 524283, 6, 0, 589817, 0, 0, 589818, 0, 0, 589819, 12, 0, 589820, 2, 0, 589821, 2, 0, 589822, 2, 0, 589823, 2, 0, 524288, 2, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0, 524304, 2, 0, 524305, 2, 0, 524306, 2, 0, 524319, 2, 0, 524320, 2, 0, 524321, 2, 0, 524322, 2, 0, 524323, 2, 0, 524324, 2, 0, 524325, 2, 0, 655353, 0, 0, 655354, 0, 0, 655355, 0, 0, 655356, 0, 0, 655357, 0, 0, 655358, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589855, 0, 0, 589856, 0, 0, 589857, 0, 0, 589858, 0, 0, 589859, 0, 0, 589860, 0, 0, 589861, 0, 0, 720889, 0, 0, 720890, 0, 0, 720891, 0, 0, 720892, 0, 0, 720893, 0, 0, 720894, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655391, 0, 0, 655392, 0, 0, 655393, 0, 0, 655394, 0, 0, 655395, 0, 0, 655396, 0, 0, 655397, 0, 0, 786425, 0, 0, 786426, 0, 0, 786427, 0, 0, 786428, 0, 0, 786429, 0, 0, 786430, 0, 0, 786431, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720927, 0, 0, 720928, 0, 0, 720929, 0, 0, 720930, 0, 0, 720931, 0, 0, 720932, 0, 0, 720933, 0, 0 )
+
+[node name="Jerry" parent="." instance=ExtResource( 2 )]
+position = Vector2( 296, 488 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="Jerry"]
+position = Vector2( 4, -45 )
+current = true
+limit_left = -350
+limit_bottom = 700
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 3200, 2799 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Sky"]
+position = Vector2( -384, -1944 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Jungle 5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.6, 0.6 )
+motion_mirroring = Vector2( 2700, 1800 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Jungle 5"]
+position = Vector2( -408, -1112 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Jungle 4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.62, 0.62 )
+motion_mirroring = Vector2( 2700, 1800 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Jungle 4"]
+position = Vector2( -408, -1112 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Jungle 3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.64, 0.64 )
+motion_mirroring = Vector2( 2700, 1800 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Jungle 3"]
+position = Vector2( -408, -1112 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Jungle 2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.66, 0.66 )
+motion_mirroring = Vector2( 2700, 1800 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Jungle 2"]
+position = Vector2( -408, -1112 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Jungle 1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.68, 0.68 )
+motion_mirroring = Vector2( 2700, 1800 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Jungle 1"]
+position = Vector2( -408, -1112 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Coin2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2080, 216 )
+
+[node name="Coin3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2592, -1064 )
+
+[node name="Coin" parent="." instance=ExtResource( 10 )]
+position = Vector2( 576, 280 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 3336, 976 )
+collision_layer = 4
+collision_mask = 5
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Area2D" to="Jerry" method="_on_Area2D_body_entered"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ASSETS/enemies/velo3.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/enemies/velo1.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/enemies/velo2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 4.0
+} ]
+
+[node name="enemy" type="KinematicBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 1, -15, 2, -23, 12, -27, 25, -23, 33, -15, 32, -6, 23, 10, 10, 30, -11, 30, -26, 4, -27, -12, -6, -3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 9.53674e-07, -9.53674e-07 )
+scale = Vector2( 1.91176, 1.91176 )
+frames = SubResource( 1 )
+animation = "walk"
+playing = true

@@ -4,7 +4,7 @@ var coins = 0
 
 func _ready():
 	$Coins.text = String(coins)
-	if coins == 3:
+	if coins == 10:
 		get_tree().change_scene("res://Level1.tscn")
 	
 func _on_Coin_coin_collected():

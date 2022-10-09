@@ -5,7 +5,7 @@ const SPEED = 400
 const GRAVITY = 50
 const JUMPFORCE = -1300
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = SPEED
 		$Sprite.play("walk")
@@ -30,6 +30,6 @@ func _physics_process(delta):
 	velocity.x = lerp(velocity.x, 0, 0.2)
 	
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	get_tree().change_scene("res://Level1.tscn")
 

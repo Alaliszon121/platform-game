@@ -3,7 +3,7 @@ extends CanvasLayer
 var coins = 0
 
 func _ready():
-	$Coins.text = String(coins)
+	$Panel/Coins.text = String(coins)
 	if coins == 10:
 		get_tree().change_scene("res://Level1.tscn")
 	

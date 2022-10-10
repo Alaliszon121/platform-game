@@ -41,12 +41,12 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="DynamicFont" id=5]
-size = 40
-font_data = ExtResource( 11 )
-
 [sub_resource type="DynamicFont" id=4]
 size = 70
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
 font_data = ExtResource( 11 )
 
 [node name="Level1" type="Node2D"]
@@ -165,38 +165,38 @@ margin_right = 258.0
 margin_bottom = 131.0
 custom_styles/panel = SubResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="HUD"]
-margin_left = 13.0
-margin_top = -9.0
-margin_right = 116.0
-margin_bottom = 115.0
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel"]
+margin_left = 5.0
+margin_top = -18.0
+margin_right = 108.0
+margin_bottom = 106.0
 texture = ExtResource( 13 )
 expand = true
 
-[node name="Label" type="Label" parent="HUD"]
+[node name="Coins" type="Label" parent="HUD/Panel"]
 anchor_left = 0.105
 anchor_top = 0.102
 anchor_right = 0.105
 anchor_bottom = 0.102
-margin_left = -6.40001
-margin_top = -37.6
-margin_right = 24.6
-margin_bottom = 39.4
-custom_colors/font_color = Color( 0.878431, 0.72549, 1, 1 )
-custom_fonts/font = SubResource( 5 )
-text = "X"
-
-[node name="Coins" type="Label" parent="HUD"]
-anchor_left = 0.105
-anchor_top = 0.102
-anchor_right = 0.105
-anchor_bottom = 0.102
-margin_left = 43.6
-margin_top = -59.6
-margin_right = 92.6
-margin_bottom = 73.4
+margin_left = 143.75
+margin_top = 0.556
+margin_right = 192.75
+margin_bottom = 133.556
 custom_colors/font_color = Color( 0.878431, 0.72549, 1, 1 )
 custom_fonts/font = SubResource( 4 )
+text = "X"
+
+[node name="Label" type="Label" parent="HUD/Panel"]
+anchor_left = 0.105
+anchor_top = 0.102
+anchor_right = 0.105
+anchor_bottom = 0.102
+margin_left = 93.75
+margin_top = 22.556
+margin_right = 124.75
+margin_bottom = 99.556
+custom_colors/font_color = Color( 0.878431, 0.72549, 1, 1 )
+custom_fonts/font = SubResource( 5 )
 text = "X"
 
 [node name="Coins" type="Node2D" parent="."]

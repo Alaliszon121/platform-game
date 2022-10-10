@@ -18,13 +18,23 @@ animations = [ {
 } ]
 
 [node name="enemy" type="KinematicBody2D"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 1, -15, 2, -23, 12, -27, 25, -23, 33, -15, 32, -6, 23, 10, 10, 30, -11, 30, -26, 4, -27, -12, -6, -3 )
+collision_layer = 16
+collision_mask = 35
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 9.53674e-07, -9.53674e-07 )
-scale = Vector2( 1.91176, 1.91176 )
+position = Vector2( 1.90735e-06, -8 )
+scale = Vector2( 2.60294, 2.60294 )
 frames = SubResource( 1 )
 animation = "walk"
+frame = 1
 playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 5.68434e-14, -3 )
+scale = Vector2( 1.30592, 1.30592 )
+polygon = PoolVector2Array( 1, -15, 1.53149, -22.2065, 8.42317, -29.0982, 24.5038, -26.801, 32.9269, -16.8463, 29.0982, -6.12594, 23, 10, 10, 30, -11, 30, -23.738, 3.82872, -27, -12, -27.5667, -16.0806 )
+
+[node name="floor_checker" type="RayCast2D" parent="."]
+position = Vector2( 40, 0 )
+enabled = true
+cast_to = Vector2( 0, 43 )

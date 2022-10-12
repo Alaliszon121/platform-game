@@ -1,14 +1,16 @@
 extends CanvasLayer
 
-var coins = 0
-
 func _ready():
-	$Panel/Coins.text = String(coins)
-	if coins == 10:
-		get_tree().change_scene("res://Level1.tscn")
-	
-func _on_Coin_coin_collected():
-	coins = coins + 1
-	print("coin")
-	_ready()
+	PlayerData.coins = 0
+	update_coins()
 
+func update_coins():
+	$Panel/Coins.text = String(PlayerData.coins)
+
+func _on_Coin_coin_collected():
+	PlayerData.coins = PlayerData.coins +1
+	print("coin")
+	update_coins()
+
+func _on_win_point_body_entered(_body):
+	get_tree().change_scene("res://Winner_scene.tscn")

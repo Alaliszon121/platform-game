@@ -5,6 +5,8 @@ const SPEED = 400
 const GRAVITY = 50
 const JUMPFORCE = -1300
 
+signal damaged
+
 func _physics_process(_delta):
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = SPEED
@@ -28,8 +30,22 @@ func _physics_process(_delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	velocity.x = lerp(velocity.x, 0, 0.2)
-	
 
 func _on_Area2D_body_entered(_body):
 	get_tree().change_scene("res://Level1.tscn")
 
+func bounce():
+	velocity.y = JUMPFORCE * 0.7
+
+func damaged(var posx):
+	set_modulate(Color(1,0.3,0.3,0.7))
+	$Timer.start()
+	velocity.y = JUMPFORCE * 0.5
+	if position.x > posx:
+		velocity.x = SPEED * 0.5
+	elif position.x < posx:
+		velocity.x = SPEED * 0.5
+	emit_signal("damaged")
+
+func _on_Timer_timeout():
+	set_modulate(Color(1,1,1,1))

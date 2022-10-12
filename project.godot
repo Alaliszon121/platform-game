@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Jerry the traveller"
-run/main_scene="res://Level1.tscn"
+run/main_scene="res://Start_scene.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+PlayerData="*res://player_data.gd"
 
 [display]
 

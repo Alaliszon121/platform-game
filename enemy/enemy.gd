@@ -25,4 +25,17 @@ func _physics_process(_delta):
 func _on_top_checker_body_entered(body):
 	$AnimatedSprite.play("dead")
 	speed = 0
-	#set_collision_layer_bit()
+	set_collision_layer_bit(4, false)
+	set_collision_mask_bit(0, false)
+	$top_checker.set_collision_layer_bit(4, false)
+	$top_checker.set_collision_mask_bit(0, false)
+	$sides_checker.set_collision_layer_bit(4, false)
+	$sides_checker.set_collision_mask_bit(0, false)
+	$Timer.start()
+	body.bounce()
+
+func _on_sides_checker_body_entered(body):
+	body.damaged(position.x)
+
+func _on_Timer_timeout():
+	queue_free()

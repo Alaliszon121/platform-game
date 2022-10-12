@@ -9,5 +9,6 @@ func _ready():
 	
 func _on_Coin_coin_collected():
 	coins = coins + 1
+	print("coin")
 	_ready()
 

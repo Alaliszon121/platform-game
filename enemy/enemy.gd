@@ -6,6 +6,7 @@ export var direction = -1
 var speed = 70
 
 func _ready():
+	PlayerData.enemies_killed = 0
 	if direction == -1:
 		$AnimatedSprite.flip_h = true
 	$floor_checker.position.x = $CollisionShape2D.shape.get_extents().x * direction
@@ -38,4 +39,5 @@ func _on_sides_checker_body_entered(body):
 	body.damaged(position.x)
 
 func _on_Timer_timeout():
+	PlayerData.enemies_killed = PlayerData.enemies_killed + 1
 	queue_free()

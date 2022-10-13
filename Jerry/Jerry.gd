@@ -32,7 +32,7 @@ func _physics_process(_delta):
 	velocity.x = lerp(velocity.x, 0, 0.2)
 
 func _on_Area2D_body_entered(_body):
-	get_tree().change_scene("res://Level1.tscn")
+	get_tree().change_scene("res://Level_1/Level1.tscn")
 
 func bounce():
 	velocity.y = JUMPFORCE * 0.7
@@ -40,12 +40,10 @@ func bounce():
 func damaged(var posx):
 	set_modulate(Color(1,0.3,0.3,0.7))
 	$Timer.start()
+	set_collision_mask_bit(4, false)
 	velocity.y = JUMPFORCE * 0.5
-	if position.x > posx:
-		velocity.x = SPEED * 0.5
-	elif position.x < posx:
-		velocity.x = SPEED * 0.5
 	emit_signal("damaged")
 
 func _on_Timer_timeout():
 	set_modulate(Color(1,1,1,1))
+	set_collision_mask_bit(4, true)

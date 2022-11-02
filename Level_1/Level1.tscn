@@ -221,7 +221,7 @@ shape = SubResource( 2 )
 position = Vector2( 1123, 28 )
 rotation = -1.5708
 scale = Vector2( 3.29284, 3.29284 )
-frame = 5
+frame = 1
 
 [node name="Sign" parent="." instance=ExtResource( 18 )]
 position = Vector2( 563, 449 )

@@ -53,13 +53,13 @@
 			"text": "Skok: W\nRuch prawo/lewo: A/D"
 		},
 		{
-			"character": "",
+			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Zeby zabic wroga nalezy mu skoczyc na glowe"
 		},
 		{
-			"character": "",
+			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Warto zbierac znajdzki!"

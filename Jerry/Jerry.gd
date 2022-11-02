@@ -37,7 +37,7 @@ func _on_Area2D_body_entered(_body):
 func bounce():
 	velocity.y = JUMPFORCE * 0.7
 
-func damaged(var posx):
+func damaged(var _posx):
 	set_modulate(Color(1,0.3,0.3,0.7))
 	$Timer.start()
 	set_collision_mask_bit(4, false)

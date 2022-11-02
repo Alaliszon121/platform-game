@@ -4,7 +4,7 @@
 
 [sub_resource type="CapsuleShape2D" id=6]
 radius = 137.0
-height = 216.0
+height = 252.0
 
 [node name="win_point" type="Area2D"]
 collision_layer = 4

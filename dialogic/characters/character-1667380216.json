@@ -1,0 +1,21 @@
+{
+	"color": "#ff1ea1f7",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1667380216.json",
+	"mirror_portraits": false,
+	"name": "Jerry",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 10,
+	"offset_y": -185,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ASSETS/player/dialog/dialog1.png"
+		}
+	],
+	"scale": 600,
+	"theme": ""
+}

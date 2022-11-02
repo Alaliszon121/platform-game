@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ASSETS/fonts/Alkalami-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://ASSETS/player/idle/platformChar_idle_right1.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/player/win/platformChar_won1.png" type="Texture" id=2]
 [ext_resource path="res://Winner_scene.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]

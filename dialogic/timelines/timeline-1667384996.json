@@ -1,0 +1,165 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "RAWR!!!"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "AAA!!! Chcesz mnie przestraszyc na smierc?"
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nie no, po co mialbym to robic? Widzialem ze umiesz mowic jako jedyny w tym miejscu no to zagadac chcialem do ciebie."
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nie wiedzialem, ze od razu az tak sie przestraszysz."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ale jestes dinozaurem! Jakim cudem mowisz!?"
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A no widzisz, kiedys nie bylem donozaurem tylko CZŁOWIEKIEM! Po prostu utknalem w tej krainie i z czasem zaczalem sie zmieniac w dinozaura. I dzieki Bogu, bo przynajmniej nie jestem juz potencjalnym obiadem kazdej istoty tutaj."
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tylko polowy z nich..."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Czyli mowisz, ze jesli sie stad szybko nie wydostane to zmienie sie w dinozaura na zawsze?"
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dokladnie tak! Ale czad, co nie?"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "NIE!!! Ja chce wrocic do domu."
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nie ma stad ucieczki... Ale jak musisz to probuj. Powodzenia!"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ehh... Czeka mnie dluga podroz..."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1667384996.json",
+		"name": "Dino1"
+	}
+}

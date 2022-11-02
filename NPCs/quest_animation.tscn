@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ASSETS/quest/quest5.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/quest/quest7.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/quest/quest8.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/quest/quest6.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+scale = Vector2( 1.78125, 1.78125 )
+frames = SubResource( 1 )
+frame = 4
+playing = true

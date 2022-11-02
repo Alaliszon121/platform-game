@@ -7,5 +7,5 @@ func _ready():
 	$Panel/MenuButton.get_popup().add_item("You've killed " + String(enemies) + " enemies.")
 
 func _on_LinkButton_pressed():
-	get_tree().change_scene("res://Level1.tscn")
+	get_tree().change_scene("res://Level_1/Level1.tscn")
 

@@ -1,0 +1,21 @@
+{
+	"color": "#ff62e542",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1667384970.json",
+	"mirror_portraits": false,
+	"name": "Dino1",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -185,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ASSETS/npcs/dino/dino_dialog.png"
+		}
+	],
+	"scale": 600,
+	"theme": ""
+}

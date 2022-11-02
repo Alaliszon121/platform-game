@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://ASSETS/WorldTiles/tileYellow_04.png" type="Texture" id=1]
 [ext_resource path="res://Jerry/Jerry.tscn" type="PackedScene" id=2]
@@ -13,7 +13,9 @@
 [ext_resource path="res://Level_1/hearts.gd" type="Script" id=11]
 [ext_resource path="res://Level_1/world_tileset.tres" type="TileSet" id=12]
 [ext_resource path="res://Level_1/win_point.tscn" type="PackedScene" id=13]
+[ext_resource path="res://NPCs/Book.tscn" type="PackedScene" id=14]
 [ext_resource path="res://enemy/enemy.tscn" type="PackedScene" id=15]
+[ext_resource path="res://NPCs/Dino1.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tileYellow_04.png 0"
@@ -63,7 +65,7 @@ tile_set = ExtResource( 3 )
 collision_layer = 2
 collision_mask = 51
 format = 1
-tile_data = PoolIntArray( -720875, 1, 0, -720874, 6, 0, -655339, 0, 0, -655338, 12, 0, -655337, 6, 0, -589803, 0, 0, -589802, 0, 0, -589801, 12, 0, -589800, 6, 0, -524267, 0, 0, -524266, 0, 0, -524265, 0, 0, -524264, 12, 0, -524263, 6, 0, -262148, 9, 0, -262147, 2, 0, -262146, 2, 0, -262145, 2, 0, -327680, 10, 0, -327649, 9, 0, -327648, 2, 0, -327647, 2, 0, -327646, 2, 0, -327645, 2, 0, -327644, 10, 0, -327629, 9, 0, -327628, 2, 0, -327627, 2, 0, -327626, 2, 0, -327625, 10, 0, -262084, 4, 0, -196606, 4, 0, -196566, 1, 0, -196565, 2, 0, -196564, 2, 0, -196563, 3, 0, -196543, 4, 0, -130996, 5, 0, -130995, 3, 0, -65492, 4, 0, -65461, 5, 0, -65460, 11, 0, -65459, 0, 0, 2, 1, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 8, 2, 0, 9, 2, 0, 10, 2, 0, 11, 3, 0, 24, 9, 0, 25, 2, 0, 26, 2, 0, 27, 2, 0, 28, 2, 0, 29, 10, 0, 74, 5, 0, 75, 11, 0, 76, 0, 0, 77, 0, 0, 65609, 5, 0, 65610, 11, 0, 65611, 0, 0, 65612, 0, 0, 65613, 0, 0, 131111, 1, 0, 131112, 2, 0, 131113, 2, 0, 131114, 2, 0, 131115, 2, 0, 131116, 2, 0, 131117, 2, 0, 131118, 3, 0, 131144, 5, 0, 131145, 11, 0, 131146, 0, 0, 131147, 0, 0, 131148, 0, 0, 131149, 0, 0, 196662, 1, 0, 196663, 3, 0, 196669, 9, 0, 196670, 2, 0, 196671, 2, 0, 196672, 2, 0, 196673, 2, 0, 196674, 2, 0, 196675, 2, 0, 196676, 2, 0, 196677, 10, 0, 262153, 4, 0, 327720, 4, 0, 327734, 4, 0 )
+tile_data = PoolIntArray( -720875, 1, 0, -720874, 6, 0, -655339, 0, 0, -655338, 12, 0, -655337, 6, 0, -589803, 0, 0, -589802, 0, 0, -589801, 12, 0, -589800, 6, 0, -524267, 0, 0, -524266, 0, 0, -524265, 0, 0, -524264, 12, 0, -524263, 6, 0, -458731, 0, 0, -458730, 0, 0, -458729, 0, 0, -458728, 0, 0, -458727, 12, 0, -458726, 6, 0, -262148, 9, 0, -262147, 2, 0, -262146, 2, 0, -262145, 2, 0, -327680, 10, 0, -327649, 9, 0, -327648, 2, 0, -327647, 2, 0, -327646, 2, 0, -327645, 2, 0, -327644, 2, 0, -327643, 10, 0, -327629, 9, 0, -327628, 2, 0, -327627, 2, 0, -327626, 2, 0, -327625, 10, 0, -262084, 4, 0, -196606, 4, 0, -196566, 1, 0, -196565, 2, 0, -196564, 2, 0, -196563, 3, 0, -196543, 4, 0, -130996, 5, 0, -130995, 3, 0, -65492, 4, 0, -65461, 5, 0, -65460, 11, 0, -65459, 0, 0, 2, 1, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 8, 2, 0, 9, 2, 0, 10, 2, 0, 11, 3, 0, 24, 9, 0, 25, 2, 0, 26, 2, 0, 27, 2, 0, 28, 2, 0, 29, 10, 0, 74, 5, 0, 75, 11, 0, 76, 0, 0, 77, 0, 0, 65609, 5, 0, 65610, 11, 0, 65611, 0, 0, 65612, 0, 0, 65613, 0, 0, 131111, 1, 0, 131112, 2, 0, 131113, 2, 0, 131114, 2, 0, 131115, 2, 0, 131116, 2, 0, 131117, 2, 0, 131118, 3, 0, 131144, 5, 0, 131145, 11, 0, 131146, 0, 0, 131147, 0, 0, 131148, 0, 0, 131149, 0, 0, 196662, 1, 0, 196663, 3, 0, 196669, 9, 0, 196670, 2, 0, 196671, 2, 0, 196672, 2, 0, 196673, 2, 0, 196674, 2, 0, 196675, 2, 0, 196676, 2, 0, 196677, 10, 0, 262153, 4, 0, 327720, 4, 0, 327734, 4, 0 )
 
 [node name="Tiles solid" type="TileMap" parent="."]
 tile_set = ExtResource( 12 )
@@ -75,43 +77,43 @@ tile_data = PoolIntArray( -1048583, 0, 0, -1114021, 0, 0, -1114020, 0, 0, -11140
 [node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
 
 [node name="enemy" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
+modulate = Color( 1, 0.603922, 0.964706, 1 )
 position = Vector2( -88, -357 )
 
 [node name="enemy2" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
-position = Vector2( 585, -57 )
+modulate = Color( 0.466667, 0.513726, 1, 1 )
+position = Vector2( 592, -42 )
 
 [node name="enemy3" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
+modulate = Color( 1, 0.933333, 0.501961, 1 )
 position = Vector2( 1728, -54 )
 
 [node name="enemy4" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
+modulate = Color( 1, 0.482353, 0.482353, 1 )
 position = Vector2( 2181, -371 )
 
 [node name="enemy5" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
+modulate = Color( 0.411765, 0.819608, 1, 1 )
 position = Vector2( 1768, 463 )
 
 [node name="enemy6" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
+modulate = Color( 0.470588, 1, 0.454902, 1 )
 position = Vector2( 2766, 81 )
 
 [node name="enemy7" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
+modulate = Color( 0.537255, 0.6, 0.992157, 1 )
 position = Vector2( 3425, -360 )
 
 [node name="enemy8" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
+modulate = Color( 0.980392, 0.517647, 0.517647, 1 )
 position = Vector2( 3603, 463 )
 
 [node name="enemy9" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
-position = Vector2( 4067, 135 )
+modulate = Color( 0.435294, 0.996078, 0.905882, 1 )
+position = Vector2( 4178, 141 )
 
 [node name="enemy10" parent="." instance=ExtResource( 15 )]
-modulate = Color( 1, 0.698039, 0.972549, 1 )
+modulate = Color( 0.992157, 0.607843, 0.956863, 1 )
 position = Vector2( 4808, 466 )
 
 [node name="Coins" type="Node2D" parent="."]
@@ -138,10 +140,10 @@ position = Vector2( 4713, 17 )
 position = Vector2( 3514, 139 )
 
 [node name="Coin8" parent="Coins" instance=ExtResource( 10 )]
-position = Vector2( 3602, 470 )
+position = Vector2( 3618, 473 )
 
 [node name="Coin9" parent="Coins" instance=ExtResource( 10 )]
-position = Vector2( 2185, -370 )
+position = Vector2( 2208, -359 )
 
 [node name="Coin10" parent="Coins" instance=ExtResource( 10 )]
 position = Vector2( 4190, 470 )
@@ -159,16 +161,16 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="win_point" parent="." instance=ExtResource( 13 )]
+position = Vector2( -44, -6 )
 
 [node name="Jerry" parent="." instance=ExtResource( 2 )]
-position = Vector2( 4895, -208 )
+position = Vector2( 1083, 457 )
 collision_mask = 31
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Camera2D" type="Camera2D" parent="Jerry"]
-position = Vector2( 4, -45 )
 current = true
 limit_left = -350
 limit_bottom = 700
@@ -176,6 +178,15 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 drag_margin_left = 0.3
 drag_margin_right = 0.3
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Jerry"]
+remote_path = NodePath("../Camera2D")
+
+[node name="Book" parent="." instance=ExtResource( 14 )]
+position = Vector2( 893, 474 )
+
+[node name="DinoNPC" parent="." instance=ExtResource( 16 )]
+position = Vector2( 5509, -291 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 7 )

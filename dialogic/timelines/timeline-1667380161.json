@@ -1,0 +1,89 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Gdzie ja jestem...? Ale tu zielono!"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "O! Ksiazka!"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Rozdzial 1. Era Dinozaurow\nCzekaja cie tu podrozniku rozne zagrozenia. Uwazaj na dinozaury...\""
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "JESTEM W ERZE DINOZAUROW!?"
+		},
+		{
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"..., co prawda niektore mogą byc przyjazne, ale wiekszosc tylko marzy, zeby odgryzc Ci glowe.\""
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, uroczo."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1667380161.json",
+		"name": "Book1"
+	}
+}

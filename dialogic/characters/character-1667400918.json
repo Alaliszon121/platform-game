@@ -1,0 +1,21 @@
+{
+	"color": "#ffeaae6e",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": true,
+	"id": "character-1667400918.json",
+	"mirror_portraits": false,
+	"name": "Sign",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -180,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ASSETS/npcs/sign/sign1.png"
+		}
+	],
+	"scale": 500,
+	"theme": ""
+}

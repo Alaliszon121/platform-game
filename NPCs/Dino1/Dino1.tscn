@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ASSETS/npcs/dino/dino2.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/npcs/dino/dino1.png" type="Texture" id=2]
+[ext_resource path="res://NPCs/quest_animation.tscn" type="PackedScene" id=3]
+[ext_resource path="res://NPCs/Dino1/Dino1.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 14.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 111.0
+height = 126.0
+
+[node name="DinoNPC" type="KinematicBody2D"]
+collision_layer = 16
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 4.76837e-07, -9.53674e-07 )
+scale = Vector2( 3.7, 3.7 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 5, 8 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="mark" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -54 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1, -77 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

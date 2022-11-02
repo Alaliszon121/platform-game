@@ -5,7 +5,8 @@ func _on_Jerry_damaged():
 		$heart3.queue_free()
 	elif get_node("heart2") != null:
 		$heart2.queue_free()
-	else:
+	elif get_node("heart1") != null:
+		$heart1.queue_free()
 		$Timer.start()
 
 func _on_Timer_timeout():

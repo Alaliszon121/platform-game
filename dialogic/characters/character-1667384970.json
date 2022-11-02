@@ -1,15 +1,15 @@
 {
 	"color": "#ff62e542",
 	"description": "",
-	"display_name": "",
-	"display_name_bool": false,
+	"display_name": "Dinosaur",
+	"display_name_bool": true,
 	"id": "character-1667384970.json",
 	"mirror_portraits": false,
 	"name": "Dino1",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": -185,
+	"offset_y": -180,
 	"portraits": [
 		{
 			"name": "Default",

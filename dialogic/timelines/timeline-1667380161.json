@@ -27,12 +27,6 @@
 			"text": "Gdzie ja jestem...? Ale tu zielono!"
 		},
 		{
-			"character": "character-1667380216.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "O! Ksiazka!"
-		},
-		{
 			"animation": "[Default]",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
@@ -51,6 +45,12 @@
 			},
 			"type": 0,
 			"z_index": 0
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "O! Ksiazka!"
 		},
 		{
 			"character": "character-1667380116.json",

@@ -1,15 +1,8 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://ASSETS/fonts/Alkalami-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://ASSETS/portals/p9.png" type="Texture" id=2]
+[ext_resource path="res://NPCs/portal/portal.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://Start_scene.gd" type="Script" id=3]
-[ext_resource path="res://ASSETS/portals/p5.png" type="Texture" id=4]
-[ext_resource path="res://ASSETS/portals/p3.png" type="Texture" id=5]
-[ext_resource path="res://ASSETS/portals/p4.png" type="Texture" id=6]
-[ext_resource path="res://ASSETS/portals/p1.png" type="Texture" id=7]
-[ext_resource path="res://ASSETS/portals/p2.png" type="Texture" id=8]
-[ext_resource path="res://ASSETS/portals/p6.png" type="Texture" id=9]
-[ext_resource path="res://ASSETS/portals/p7.png" type="Texture" id=10]
 [ext_resource path="res://ASSETS/player/run/right/platformChar_walk_right5.png" type="Texture" id=11]
 [ext_resource path="res://ASSETS/player/run/right/platformChar_walk_right6.png" type="Texture" id=12]
 [ext_resource path="res://ASSETS/player/run/right/platformChar_walk_right8.png" type="Texture" id=13]
@@ -19,12 +12,8 @@
 [ext_resource path="res://ASSETS/player/run/right/platformChar_walk_right2.png" type="Texture" id=17]
 [ext_resource path="res://ASSETS/player/run/right/platformChar_walk_right4.png" type="Texture" id=18]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.596924, 0.796827, 0.9375, 1 )
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 100
@@ -39,14 +28,6 @@ font_data = ExtResource( 1 )
 size = 80
 font_data = ExtResource( 1 )
 
-[sub_resource type="SpriteFrames" id=5]
-animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "idle",
-"speed": 9.0
-} ]
-
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 13 ) ],
@@ -55,46 +36,58 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
 script = ExtResource( 3 )
 
-[node name="Panel" type="Panel" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1280.0
 margin_bottom = 800.0
-custom_styles/panel = SubResource( 1 )
+color = Color( 0.596078, 0.796078, 0.937255, 1 )
 
-[node name="Label" type="Label" parent="Panel"]
-margin_left = 328.0
-margin_top = 104.0
-margin_right = 567.0
-margin_bottom = 294.0
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 286.0
+margin_top = 84.0
+margin_right = 936.0
+margin_bottom = 358.0
+custom_styles/panel = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Jerry" type="Label" parent="Panel2"]
+margin_left = 35.0
+margin_top = 20.0
+margin_right = 274.0
+margin_bottom = 210.0
 custom_colors/font_color = Color( 0.4, 0.141176, 0.0745098, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Jerry"
 
-[node name="Label2" type="Label" parent="Panel"]
-margin_left = 568.0
-margin_top = 168.0
-margin_right = 653.0
-margin_bottom = 283.0
+[node name="the" type="Label" parent="Panel2"]
+margin_left = 273.0
+margin_top = 80.0
+margin_right = 358.0
+margin_bottom = 195.0
 custom_colors/font_color = Color( 0.4, 0.141176, 0.0745098, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "the"
 
-[node name="Label3" type="Label" parent="Panel"]
-margin_left = 496.0
-margin_top = 192.0
-margin_right = 918.0
-margin_bottom = 382.0
+[node name="Traveller" type="Label" parent="Panel2"]
+margin_left = 187.0
+margin_top = 105.0
+margin_right = 609.0
+margin_bottom = 295.0
 custom_colors/font_color = Color( 0.4, 0.141176, 0.0745098, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Traveller"
 
-[node name="LinkButton" type="LinkButton" parent="Panel"]
-margin_left = 568.0
-margin_top = 376.0
-margin_right = 729.0
-margin_bottom = 528.0
+[node name="LinkButton" type="LinkButton" parent="."]
+margin_left = 545.0
+margin_top = 440.0
+margin_right = 706.0
+margin_bottom = 592.0
 focus_mode = 2
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.235294, 0.235294, 0.235294, 1 )
@@ -104,19 +97,18 @@ custom_fonts/font = SubResource( 4 )
 text = "Play"
 underline = 2
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Panel"]
-position = Vector2( 1088, 440 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1089, 439 )
 scale = Vector2( 8.34335, 6.55388 )
-frames = SubResource( 5 )
+frames = ExtResource( 2 )
 animation = "idle"
-frame = 7
 playing = true
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="Panel"]
-position = Vector2( 240, 440 )
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 185, 432 )
 scale = Vector2( 8.125, 8.91207 )
 frames = SubResource( 6 )
 frame = 4
 playing = true
 
-[connection signal="pressed" from="Panel/LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]

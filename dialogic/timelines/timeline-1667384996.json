@@ -50,13 +50,19 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "AAA!!! Chcesz mnie przestraszyc na smierc?"
+			"text": "Aaa!!! Chcesz mnie przestraszyc na smierc!?"
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nie no, po co mialbym to robic? Widzialem ze umiesz mowic jako jedyny w tym miejscu no to zagadac chcialem do ciebie."
+			"text": "Nie no, po co mialbym to robic? \nWidzialem, ze umiesz mowic jako jedyny w tym miejscu."
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No i zagadac do ciebie chcialem."
 		},
 		{
 			"character": "character-1667384970.json",
@@ -74,7 +80,13 @@
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "A no widzisz, kiedys nie bylem donozaurem tylko CZŁOWIEKIEM! Po prostu utknalem w tej krainie i z czasem zaczalem sie zmieniac w dinozaura. I dzieki Bogu, bo przynajmniej nie jestem juz potencjalnym obiadem kazdej istoty tutaj."
+			"text": "A no widzisz, kiedys nie bylem dinozaurem tylko CZŁOWIEKIEM! Po prostu utknalem w tej krainie i z czasem zaczalem sie zmieniac w dinozaura."
+		},
+		{
+			"character": "character-1667384970.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " I dzieki Bogu, bo przynajmniej nie jestem juz potencjalnym obiadem kazdej istoty ktora tutaj zyje."
 		},
 		{
 			"character": "character-1667384970.json",
@@ -98,7 +110,7 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "NIE!!! Ja chce wrocic do domu."
+			"text": "Nie! Ja chce wrocic do domu."
 		},
 		{
 			"character": "character-1667384970.json",

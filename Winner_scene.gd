@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 func _ready():
 	var eastereggs = PlayerData.coins
@@ -8,4 +8,3 @@ func _ready():
 
 func _on_LinkButton_pressed():
 	get_tree().change_scene("res://Level_1/Level1.tscn")
-

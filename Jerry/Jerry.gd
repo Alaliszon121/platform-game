@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+enum States {AIR, FLOOR, LADDER, WALL}
+var state = States.AIR
 var velocity = Vector2(0, 0)
 const SPEED = 400
 const GRAVITY = 50
@@ -8,28 +10,47 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
-	if Input.is_action_pressed("ui_right"):
-		velocity.x = SPEED
-		$Sprite.play("walk")
-		$Sprite.flip_h = false
-	elif Input.is_action_pressed("ui_left"):
-		velocity.x = -SPEED
-		$Sprite.play("walk")
-		$Sprite.flip_h = true
-	else:
-		$Sprite.play("idle")
 	
-	if  not is_on_floor():
-		$Sprite.play("jump")
-	
+	match state:
+		States.AIR:
+			if is_on_floor():
+				state = States.FLOOR
+				continue
+			$Sprite.play("jump")
+			if Input.is_action_pressed("ui_right"):
+				velocity.x = SPEED
+				$Sprite.flip_h = false
+			elif Input.is_action_pressed("ui_left"):
+				velocity.x = -SPEED
+				$Sprite.flip_h = true
+			else:
+				velocity.x = lerp(velocity.x, 0, 0.2)
+			move_and_fall()
+			
+		States.FLOOR:
+			if not is_on_floor():
+				state = States.AIR
+			if Input.is_action_pressed("ui_right"):
+				velocity.x = SPEED
+				$Sprite.play("walk")
+				$Sprite.flip_h = false
+			elif Input.is_action_pressed("ui_left"):
+				velocity.x = -SPEED
+				$Sprite.play("walk")
+				$Sprite.flip_h = true
+			else:
+				$Sprite.play("idle")
+				velocity.x = lerp(velocity.x, 0, 0.2)
+
+			if Input.is_action_pressed("ui_up"):
+				velocity.y = JUMPFORCE
+				state = States.AIR
+				
+			move_and_fall()
+
+func move_and_fall():
 	velocity.y = velocity.y + GRAVITY
-	
-	if Input.is_action_pressed("ui_up") and is_on_floor():
-		velocity.y = JUMPFORCE
-	
 	velocity = move_and_slide(velocity, Vector2.UP)
-	
-	velocity.x = lerp(velocity.x, 0, 0.2)
 
 func _on_Area2D_body_entered(_body):
 	get_tree().change_scene("res://Level_1/Level1.tscn")

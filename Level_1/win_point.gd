@@ -1,7 +1,6 @@
 extends Area2D
 
 func _on_win_point_body_entered(body):
-	get_tree().paused
 	if !PlayerData.is_dialog_playing:
 		PlayerData.is_dialog_playing = true
 		var new_dialog = Dialogic.start('Dino1')

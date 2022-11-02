@@ -35,7 +35,7 @@
 0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 3339.25, 91.5 )
+extents = Vector2( 4945.13, 91.5 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.215686, 0.160784, 0.258824, 0.721569 )
@@ -214,13 +214,14 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1605.88, 0 )
 shape = SubResource( 2 )
 
 [node name="Portal" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1123, 28 )
 rotation = -1.5708
 scale = Vector2( 3.29284, 3.29284 )
-frame = 6
+frame = 5
 
 [node name="Sign" parent="." instance=ExtResource( 18 )]
 position = Vector2( 563, 449 )

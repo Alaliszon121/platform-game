@@ -21,9 +21,8 @@
 [ext_resource path="res://ASSETS/player/idle/platformChar_idle_right2.png" type="Texture" id=23]
 [ext_resource path="res://ASSETS/player/jump/platformChar_jump_right.png" type="Texture" id=25]
 
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 22.0
-height = 56.0
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 19.5, 47 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -67,7 +66,8 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+position = Vector2( -0.5, 4 )
+shape = SubResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -78,10 +78,14 @@ rotation = -0.000530539
 scale = Vector2( 5, 5 )
 frames = SubResource( 4 )
 animation = "walk"
-frame = 5
+frame = 3
 playing = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.2
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_CoyoteTimer_timeout"]

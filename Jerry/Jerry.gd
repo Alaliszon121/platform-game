@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum States {AIR, FLOOR, LADDER, WALL}
+enum States {AIR, FLOOR, DIALOGUE, LADDER, WALL}
 var state = States.AIR
 var velocity = Vector2(0, 0)
 const SPEED = 400
@@ -29,7 +29,7 @@ func _physics_process(_delta):
 			
 		States.FLOOR:
 			if not is_on_floor():
-				state = States.AIR
+				$CoyoteTimer.start()
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
 				$Sprite.play("walk")
@@ -47,6 +47,9 @@ func _physics_process(_delta):
 				state = States.AIR
 				
 			move_and_fall()
+		States.DIALOGUE:
+			pass
+
 
 func move_and_fall():
 	velocity.y = velocity.y + GRAVITY
@@ -74,3 +77,6 @@ func damaged(var posx):
 func _on_Timer_timeout():
 	set_modulate(Color(1,1,1,1))
 	set_collision_mask_bit(4, true)
+
+func _on_CoyoteTimer_timeout():
+	state = States.AIR

@@ -1,13 +1,28 @@
 extends CanvasLayer
 
+var hearts = 3
+
 func _on_Jerry_damaged():
-	if get_node("heart3") != null:
-		$heart3.queue_free()
-	elif get_node("heart2") != null:
-		$heart2.queue_free()
-	elif get_node("heart1") != null:
-		$heart1.queue_free()
+	if hearts > 1:
+		hearts = hearts - 1
+		if $heart3.visible:
+			$heart3.visible = false
+		elif $heart2.visible:
+			$heart2.visible = false
+	elif hearts == 1:
+		$heart.visible = false
 		$Timer.start()
 
 func _on_Timer_timeout():
 	get_tree().change_scene("res://Level_1/Level1.tscn")
+
+func _on_Health_potion_health_gained():
+	if hearts < 3:
+		hearts = hearts + 1
+		
+	if $heart2.visible == false:
+		$heart2.visible = true
+	elif $heart3.visible == false:
+		$heart3.visible = true
+	else:
+		pass

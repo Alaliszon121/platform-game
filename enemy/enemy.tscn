@@ -6,13 +6,13 @@
 [ext_resource path="res://enemy/enemy.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 28, 32.5 )
+extents = Vector2( 26.5, 33.25 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 35.5, 8 )
+extents = Vector2( 36.25, 6 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 40.5, 26.5 )
+extents = Vector2( 42, 26.5 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -38,7 +38,7 @@ __meta__ = {
 direction = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2, 8 )
+position = Vector2( 1.24999, 8.5 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
@@ -49,18 +49,18 @@ cast_to = Vector2( 0, 43 )
 collision_mask = 2
 
 [node name="top_checker" type="Area2D" parent="."]
-collision_layer = 16
+collision_layer = 0
 collision_mask = 33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="top_checker"]
-position = Vector2( 1.5, -29 )
+position = Vector2( 1.25, -25 )
 shape = SubResource( 3 )
 
 [node name="sides_checker" type="Area2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sides_checker"]
-position = Vector2( 1.5, 8.5 )
+position = Vector2( 1, 8.5 )
 shape = SubResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

@@ -16,11 +16,9 @@ func _physics_process(_delta):
 		direction = direction * -1
 		$AnimatedSprite.flip_h = not $AnimatedSprite.flip_h
 		$floor_checker.position.x = $CollisionShape2D.shape.get_extents().x * direction
-
+		
 	velocity.y = velocity.y + GRAVITY
-	
 	velocity.x = speed * direction
-	
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func _on_top_checker_body_entered(body):

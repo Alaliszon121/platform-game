@@ -41,7 +41,6 @@ func _physics_process(_delta):
 			else:
 				$Sprite.play("idle")
 				velocity.x = lerp(velocity.x, 0, 0.2)
-
 			if Input.is_action_pressed("ui_up"):
 				velocity.y = JUMPFORCE
 				state = States.AIR

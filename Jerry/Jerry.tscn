@@ -78,7 +78,7 @@ rotation = -0.000530539
 scale = Vector2( 5, 5 )
 frames = SubResource( 4 )
 animation = "walk"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

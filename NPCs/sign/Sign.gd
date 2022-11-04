@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var active_dialog = true
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	print("czytam!")
 	if !PlayerData.is_dialog_playing and active_dialog:
 		PlayerData.is_dialog_playing = true

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	if !PlayerData.is_dialog_playing:
 		PlayerData.is_dialog_playing = true
 		$mark.queue_free()
@@ -8,7 +8,7 @@ func _on_Area2D_body_entered(body):
 		add_child(new_dialog)
 		new_dialog.connect("timeline_end", self, 'dino_gone')
 
-func dino_gone(timeline_name):
+func dino_gone(_timeline_name):
 	print("koniec dialogu")
 	$Timer.start()
 

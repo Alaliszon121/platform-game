@@ -4,7 +4,10 @@ enum States {AIR, FLOOR, DIALOGUE, LADDER, WALL}
 
 var state = States.AIR
 var velocity = Vector2(0, 0)
+
 var jumps_left = 0
+
+var last_walljump_direction = 0
 var direction = 1
 
 const SPEED = 400
@@ -21,7 +24,7 @@ func _physics_process(_delta):
 				continue
 			elif can_walljump():
 				if Input.is_action_pressed("ui_up") and ((Input.is_action_pressed("ui_left") and direction == 1) or (Input.is_action_pressed("ui_right") and direction == -1)):
-					print("walljump")
+					last_walljump_direction = direction
 					velocity.y = JUMPFORCE
 			$Sprite.play("jump")
 			if Input.is_action_pressed("ui_right"):
@@ -40,6 +43,7 @@ func _physics_process(_delta):
 			move_and_fall()
 			
 		States.FLOOR:
+			last_walljump_direction = 0
 			if not is_on_floor():
 				jumps_left = 1
 				state = States.AIR
@@ -70,7 +74,11 @@ func _physics_process(_delta):
 			move_and_fall()
 
 func can_walljump():
-	if is_near_wall() and (jumps_left == 0):
+	if is_near_wall() and (jumps_left == 0) and (last_walljump_direction != direction):
+		if $Wallchecker.rotation_degrees == 90:
+			last_walljump_direction = 1
+		elif $Wallchecker.rotation_degrees == -90:
+			last_walljump_direction = -1
 		return true
 	else:
 		return false

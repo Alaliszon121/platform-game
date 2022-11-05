@@ -21,9 +21,6 @@
 [ext_resource path="res://ASSETS/player/idle/platformChar_idle_right2.png" type="Texture" id=23]
 [ext_resource path="res://ASSETS/player/jump/platformChar_jump_right.png" type="Texture" id=25]
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 19.5, 47 )
-
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
@@ -57,17 +54,13 @@ animations = [ {
 "speed": 4.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 19.5, 47 )
+
 [node name="Jerry" type="KinematicBody2D"]
 position = Vector2( -1, 2 )
 collision_mask = 47
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, 4 )
-shape = SubResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -77,8 +70,7 @@ position = Vector2( -1, -26 )
 rotation = -0.000530539
 scale = Vector2( 5, 5 )
 frames = SubResource( 4 )
-animation = "walk"
-frame = 1
+animation = "jump"
 playing = true
 
 [node name="Timer" type="Timer" parent="."]
@@ -86,6 +78,17 @@ wait_time = 0.5
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = -1.5708
+cast_to = Vector2( 0.999999, 31 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 4 )
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_CoyoteTimer_timeout"]

@@ -9,7 +9,7 @@
 extents = Vector2( 26.5, 33.25 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 36.25, 6 )
+extents = Vector2( 39, 6 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 42, 26.5 )
@@ -53,7 +53,7 @@ collision_layer = 0
 collision_mask = 33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="top_checker"]
-position = Vector2( 1.25, -25 )
+position = Vector2( 1, -25 )
 shape = SubResource( 3 )
 
 [node name="sides_checker" type="Area2D" parent="."]

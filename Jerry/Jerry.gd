@@ -1,12 +1,15 @@
 extends KinematicBody2D
 
 enum States {AIR, FLOOR, DIALOGUE, LADDER, WALL}
+
 var state = States.AIR
 var velocity = Vector2(0, 0)
+var can_jump = false
+var direction = 1
+
 const SPEED = 400
 const GRAVITY = 50
 const JUMPFORCE = -1300
-var can_jump = false
 
 signal damaged
 
@@ -15,6 +18,9 @@ func _physics_process(_delta):
 		States.AIR:
 			if is_on_floor():
 				state = States.FLOOR
+				continue
+			elif is_near_wall():
+				state = States.WALL
 				continue
 			$Sprite.play("jump")
 			if Input.is_action_pressed("ui_right"):
@@ -25,8 +31,9 @@ func _physics_process(_delta):
 				$Sprite.flip_h = true
 			else:
 				velocity.x = lerp(velocity.x, 0, 0.2)
-			if can_jump and Input.is_action_just_pressed("ui_up"):
+			if can_jump and Input.is_action_pressed("ui_up"):
 				velocity.y = JUMPFORCE
+			set_direction()
 			move_and_fall()
 			
 		States.FLOOR:
@@ -34,6 +41,7 @@ func _physics_process(_delta):
 				can_jump = true
 				$CoyoteTimer.start()
 				state = States.AIR
+				continue
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
 				$Sprite.play("walk")
@@ -48,11 +56,28 @@ func _physics_process(_delta):
 			if Input.is_action_pressed("ui_up"):
 				velocity.y = JUMPFORCE
 				state = States.AIR
-				
+			set_direction()
 			move_and_fall()
 			
 		States.WALL:
-			pass
+			if is_on_floor():
+				state = States.FLOOR
+				continue
+			elif not is_near_wall():
+				state = States.AIR
+				continue
+			$Sprite.play("jump")
+			if Input.is_action_pressed("ui_up") and ((Input.is_action_pressed("ui_left") and direction == 1) or (Input.is_action_pressed("ui_right") and direction == -1)):
+				velocity.y = JUMPFORCE
+				velocity.x = SPEED * -direction
+				state = States.AIR
+			if Input.is_action_pressed("ui_right"):
+				velocity.x = SPEED
+				$Sprite.flip_h = false
+			elif Input.is_action_pressed("ui_left"):
+				velocity.x = -SPEED
+				$Sprite.flip_h = true
+			move_and_fall()
 			
 		States.DIALOGUE:
 			$Sprite.play("idle")
@@ -63,8 +88,15 @@ func _physics_process(_delta):
 			velocity.x = lerp(velocity.x, 0, 0.2)
 			move_and_fall()
 
+func set_direction():
+	if $Sprite.flip_h:
+		direction = -1
+	else:
+		direction = 1
+	$Wallchecker.rotation_degrees = 90 * -direction
+
 func is_near_wall():
-	pass
+	return $Wallchecker.is_colliding()
 
 func move_and_fall():
 	velocity.y = velocity.y + GRAVITY

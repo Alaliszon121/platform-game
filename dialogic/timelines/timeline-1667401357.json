@@ -69,6 +69,12 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Czerwone eliksiry przywracaja zycie do maksymalnie 3 serc."
+		},
+		{
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Da sie odbijac od od sciany (walljump)"
 		}
 	],
 	"metadata": {

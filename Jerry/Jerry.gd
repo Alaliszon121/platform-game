@@ -6,11 +6,11 @@ var velocity = Vector2(0, 0)
 const SPEED = 400
 const GRAVITY = 50
 const JUMPFORCE = -1300
+var can_jump = false
 
 signal damaged
 
 func _physics_process(_delta):
-	
 	match state:
 		States.AIR:
 			if is_on_floor():
@@ -25,11 +25,15 @@ func _physics_process(_delta):
 				$Sprite.flip_h = true
 			else:
 				velocity.x = lerp(velocity.x, 0, 0.2)
+			if can_jump and Input.is_action_just_pressed("ui_up"):
+				velocity.y = JUMPFORCE
 			move_and_fall()
 			
 		States.FLOOR:
 			if not is_on_floor():
+				can_jump = true
 				$CoyoteTimer.start()
+				state = States.AIR
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
 				$Sprite.play("walk")
@@ -46,9 +50,21 @@ func _physics_process(_delta):
 				state = States.AIR
 				
 			move_and_fall()
-		States.DIALOGUE:
+			
+		States.WALL:
 			pass
+			
+		States.DIALOGUE:
+			$Sprite.play("idle")
+			if Input.is_action_pressed("ui_right"):
+				$Sprite.flip_h = false
+			elif Input.is_action_pressed("ui_left"):
+				$Sprite.flip_h = true
+			velocity.x = lerp(velocity.x, 0, 0.2)
+			move_and_fall()
 
+func is_near_wall():
+	pass
 
 func move_and_fall():
 	velocity.y = velocity.y + GRAVITY
@@ -78,4 +94,10 @@ func _on_Timer_timeout():
 	set_collision_mask_bit(4, true)
 
 func _on_CoyoteTimer_timeout():
-	state = States.AIR
+	can_jump = false
+
+func _on_NPC_dialogue_start():
+	state = States.DIALOGUE
+
+func _on_NPC_dialogue_end():
+	state = States.FLOOR

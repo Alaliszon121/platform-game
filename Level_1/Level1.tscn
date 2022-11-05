@@ -266,13 +266,13 @@ shape = SubResource( 2 )
 position = Vector2( 1123, 28 )
 rotation = -1.5708
 scale = Vector2( 3.29284, 3.29284 )
-frame = 3
+frame = 1
 
 [node name="Sign" parent="." instance=ExtResource( 18 )]
 position = Vector2( 563, 449 )
 
 [node name="Jerry" parent="." instance=ExtResource( 2 )]
-position = Vector2( 7339, -3385 )
+position = Vector2( 1121, 52 )
 collision_mask = 31
 
 [node name="Camera2D" type="Camera2D" parent="Jerry"]
@@ -405,7 +405,12 @@ expand = true
 [connection signal="coin_collected" from="Coins/Coin27" to="HUD" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin28" to="HUD" method="_on_Coin_coin_collected"]
 [connection signal="body_entered" from="Area2D" to="Jerry" method="_on_Area2D_body_entered"]
+[connection signal="dialogue_end" from="Sign" to="Jerry" method="_on_NPC_dialogue_end"]
+[connection signal="dialogue_start" from="Sign" to="Jerry" method="_on_NPC_dialogue_start"]
 [connection signal="damaged" from="Jerry" to="hearts" method="_on_Jerry_damaged"]
+[connection signal="dialogue_end" from="Book" to="Jerry" method="_on_NPC_dialogue_end"]
+[connection signal="dialogue_start" from="Book" to="Jerry" method="_on_NPC_dialogue_start"]
+[connection signal="dialogue_start" from="DinoNPC" to="Jerry" method="_on_NPC_dialogue_start"]
 [connection signal="health_gained" from="Health_potion" to="hearts" method="_on_Health_potion_health_gained"]
 [connection signal="health_gained" from="Health_potion3" to="hearts" method="_on_Health_potion_health_gained"]
 [connection signal="timeout" from="hearts/Timer" to="hearts" method="_on_Timer_timeout"]

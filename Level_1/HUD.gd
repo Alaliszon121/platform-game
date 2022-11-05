@@ -9,7 +9,6 @@ func update_coins():
 
 func _on_Coin_coin_collected():
 	PlayerData.coins = PlayerData.coins +1
-	print("coin")
 	update_coins()
 
 func _on_win_point_body_entered(_body):

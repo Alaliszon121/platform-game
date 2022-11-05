@@ -68,13 +68,11 @@ rotation = -0.000530539
 scale = Vector2( 5, 5 )
 frames = SubResource( 4 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
-
-[node name="CoyoteTimer" type="Timer" parent="."]
-wait_time = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, 6.5 )
@@ -91,4 +89,3 @@ cast_to = Vector2( -0.000108719, 30 )
 collision_mask = 2
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="timeout" from="CoyoteTimer" to="." method="_on_CoyoteTimer_timeout"]

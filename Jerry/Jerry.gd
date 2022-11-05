@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum States {AIR, FLOOR, DIALOGUE, LADDER, WALL}
+enum States {AIR, FLOOR, DIALOGUE, LADDER}
 
 var state = States.AIR
 var velocity = Vector2(0, 0)
@@ -17,6 +17,7 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
+	print(jumps_left)
 	match state:
 		States.AIR:
 			if is_on_floor():
@@ -36,9 +37,8 @@ func _physics_process(_delta):
 			else:
 				velocity.x = lerp(velocity.x, 0, 0.2)
 			if jumps_left == 1 and Input.is_action_pressed("ui_up"):
-				print("coyote jump")
-				jumps_left = 0
 				velocity.y = JUMPFORCE
+				jumps_left = 0
 			set_direction()
 			move_and_fall()
 			
@@ -119,9 +119,6 @@ func damaged(var posx):
 func _on_Timer_timeout():
 	set_modulate(Color(1,1,1,1))
 	set_collision_mask_bit(4, true)
-
-func _on_CoyoteTimer_timeout():
-	jumps_left = 0
 
 func _on_NPC_dialogue_start():
 	state = States.DIALOGUE

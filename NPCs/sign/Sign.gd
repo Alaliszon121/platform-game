@@ -5,7 +5,6 @@ signal dialogue_start
 signal dialogue_end
 
 func _on_Area2D_body_entered(_body):
-	print("czytam!")
 	if !PlayerData.is_dialog_playing and active_dialog:
 		PlayerData.is_dialog_playing = true
 		var new_dialog = Dialogic.start('Sign1')

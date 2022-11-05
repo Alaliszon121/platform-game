@@ -4,7 +4,7 @@ enum States {AIR, FLOOR, DIALOGUE, LADDER, WALL}
 
 var state = States.AIR
 var velocity = Vector2(0, 0)
-var can_jump = false
+var jumps_left = 0
 var direction = 1
 
 const SPEED = 400
@@ -19,9 +19,10 @@ func _physics_process(_delta):
 			if is_on_floor():
 				state = States.FLOOR
 				continue
-			elif is_near_wall():
-				state = States.WALL
-				continue
+			elif can_walljump():
+				if Input.is_action_pressed("ui_up") and ((Input.is_action_pressed("ui_left") and direction == 1) or (Input.is_action_pressed("ui_right") and direction == -1)):
+					print("walljump")
+					velocity.y = JUMPFORCE
 			$Sprite.play("jump")
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
@@ -31,17 +32,17 @@ func _physics_process(_delta):
 				$Sprite.flip_h = true
 			else:
 				velocity.x = lerp(velocity.x, 0, 0.2)
-			if can_jump and Input.is_action_pressed("ui_up"):
+			if jumps_left == 1 and Input.is_action_pressed("ui_up"):
+				print("coyote jump")
+				jumps_left = 0
 				velocity.y = JUMPFORCE
 			set_direction()
 			move_and_fall()
 			
 		States.FLOOR:
 			if not is_on_floor():
-				can_jump = true
-				$CoyoteTimer.start()
+				jumps_left = 1
 				state = States.AIR
-				continue
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
 				$Sprite.play("walk")
@@ -59,26 +60,6 @@ func _physics_process(_delta):
 			set_direction()
 			move_and_fall()
 			
-		States.WALL:
-			if is_on_floor():
-				state = States.FLOOR
-				continue
-			elif not is_near_wall():
-				state = States.AIR
-				continue
-			$Sprite.play("jump")
-			if Input.is_action_pressed("ui_up") and ((Input.is_action_pressed("ui_left") and direction == 1) or (Input.is_action_pressed("ui_right") and direction == -1)):
-				velocity.y = JUMPFORCE
-				velocity.x = SPEED * -direction
-				state = States.AIR
-			if Input.is_action_pressed("ui_right"):
-				velocity.x = SPEED
-				$Sprite.flip_h = false
-			elif Input.is_action_pressed("ui_left"):
-				velocity.x = -SPEED
-				$Sprite.flip_h = true
-			move_and_fall()
-			
 		States.DIALOGUE:
 			$Sprite.play("idle")
 			if Input.is_action_pressed("ui_right"):
@@ -88,15 +69,21 @@ func _physics_process(_delta):
 			velocity.x = lerp(velocity.x, 0, 0.2)
 			move_and_fall()
 
+func can_walljump():
+	if is_near_wall() and (jumps_left == 0):
+		return true
+	else:
+		return false
+
+func is_near_wall():
+	return $Wallchecker.is_colliding()
+
 func set_direction():
 	if $Sprite.flip_h:
 		direction = -1
 	else:
 		direction = 1
 	$Wallchecker.rotation_degrees = 90 * -direction
-
-func is_near_wall():
-	return $Wallchecker.is_colliding()
 
 func move_and_fall():
 	velocity.y = velocity.y + GRAVITY
@@ -126,7 +113,7 @@ func _on_Timer_timeout():
 	set_collision_mask_bit(4, true)
 
 func _on_CoyoteTimer_timeout():
-	can_jump = false
+	jumps_left = 0
 
 func _on_NPC_dialogue_start():
 	state = States.DIALOGUE

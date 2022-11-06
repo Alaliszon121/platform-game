@@ -24,3 +24,6 @@ I never thought I would make my game available here, and yet I did. I'm making i
 - Hidden difficult sublevels
 - Start and end screens
 - Statistics at the end of the level
+
+Full gameplay played by me:
+[https://youtu.be/eBYl40oXy30](https://youtu.be/eBYl40oXy30)

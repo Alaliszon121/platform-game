@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=2 format=2]
 
-[ext_resource path="res://ASSETS/WorldTiles/tileYellow_04.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/WorldTiles/level1/tileYellow_04.png" type="Texture" id=3]
 
 [resource]
 0/name = "tileYellow_04.png 0"

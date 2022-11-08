@@ -102,14 +102,13 @@ position = Vector2( 1089, 439 )
 scale = Vector2( 8.34335, 6.55388 )
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 185, 432 )
 scale = Vector2( 8.125, 8.91207 )
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]

@@ -7,11 +7,11 @@
 [ext_resource path="res://ASSETS/fonts/arrow2.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 100
+size = 40
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 37
+size = 40
 font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=4]
@@ -37,22 +37,22 @@ margin_bottom = 799.0
 color = Color( 0.596078, 0.796078, 0.937255, 1 )
 
 [node name="Levels" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 15.0
-margin_right = 413.0
-margin_bottom = 205.0
+margin_left = 116.0
+margin_top = 75.0
+margin_right = 238.0
+margin_bottom = 152.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Levels:"
 
 [node name="coinscollected" type="Label" parent="."]
-margin_left = 895.0
-margin_top = 86.0
-margin_right = 1140.0
-margin_bottom = 157.0
+margin_left = 825.0
+margin_top = 77.0
+margin_right = 1144.0
+margin_bottom = 154.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "coins collected:"
+text = "collectibles found:"
 align = 1
 
 [node name="Panel_level1" type="Panel" parent="."]

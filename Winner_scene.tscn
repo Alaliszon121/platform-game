@@ -4,23 +4,23 @@
 [ext_resource path="res://ASSETS/player/win/platformChar_won1.png" type="Texture" id=2]
 [ext_resource path="res://Winner_scene.gd" type="Script" id=3]
 
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 1 )
+
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.972549, 0.835294, 0.690196, 0 )
+bg_color = Color( 1, 1, 1, 0.235294 )
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="DynamicFont" id=2]
-size = 100
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=3]
-size = 80
+size = 45
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 35
+[sub_resource type="DynamicFont" id=4]
+size = 18
 font_data = ExtResource( 1 )
 
 [node name="Control" type="Control"]
@@ -33,33 +33,39 @@ margin_right = 1277.0
 margin_bottom = 801.0
 color = Color( 0.972549, 0.835294, 0.690196, 1 )
 
-[node name="Panel" type="Panel" parent="."]
-margin_right = 1280.0
-margin_bottom = 800.0
-custom_styles/panel = SubResource( 1 )
-
-[node name="Label" type="Label" parent="Panel"]
-margin_left = 360.0
-margin_top = 137.0
-margin_right = 910.0
-margin_bottom = 327.0
+[node name="Label" type="Label" parent="."]
+margin_left = 362.0
+margin_top = 101.0
+margin_right = 912.0
+margin_bottom = 291.0
 custom_colors/font_color = Color( 0.372549, 0.219608, 0.054902, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "You've won!"
 
-[node name="TextureRect" type="TextureRect" parent="Panel"]
-margin_left = 68.0
-margin_top = 184.0
-margin_right = 311.0
-margin_bottom = 529.0
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 63.0
+margin_top = 263.0
+margin_right = 306.0
+margin_bottom = 608.0
 texture = ExtResource( 2 )
 expand = true
 
-[node name="LinkButton" type="LinkButton" parent="Panel"]
-margin_left = 455.0
-margin_top = 507.0
-margin_right = 824.0
-margin_bottom = 659.0
+[node name="Panel" type="Panel" parent="."]
+margin_left = 440.0
+margin_top = 278.0
+margin_right = 844.0
+margin_bottom = 721.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="TryAgain" type="LinkButton" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -103.5
+margin_top = -8.5
+margin_right = 103.5
+margin_bottom = 77.5
 custom_colors/font_color_focus = Color( 0.372549, 0.219608, 0.054902, 1 )
 custom_colors/font_color = Color( 0.235294, 0.235294, 0.235294, 1 )
 custom_colors/font_color_hover = Color( 0.564706, 0.333333, 0.0823529, 1 )
@@ -68,21 +74,49 @@ custom_fonts/font = SubResource( 3 )
 text = "Play again"
 underline = 2
 
-[node name="MenuButton" type="MenuButton" parent="Panel"]
-anchor_left = 0.403906
-anchor_top = 0.3625
-anchor_right = 0.595312
-anchor_bottom = 0.47
-mouse_default_cursor_shape = 2
-custom_colors/font_color_disabled = Color( 0.372549, 0.219608, 0.054902, 1 )
-custom_colors/font_color = Color( 0.372549, 0.219608, 0.054902, 1 )
-custom_colors/font_color_hover = Color( 0.596078, 0.352941, 0.0901961, 1 )
-custom_colors/font_color_pressed = Color( 0.596078, 0.352941, 0.0901961, 1 )
-custom_fonts/font = SubResource( 5 )
-text = "See stats"
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": true
-}
+[node name="goToMenu" type="LinkButton" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -112.5
+margin_top = -134.0
+margin_right = 115.5
+margin_bottom = -48.0
+focus_mode = 2
+custom_colors/font_color_focus = Color( 0.372549, 0.219608, 0.054902, 1 )
+custom_colors/font_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+custom_colors/font_color_hover = Color( 0.564706, 0.333333, 0.0823529, 1 )
+custom_colors/font_color_pressed = Color( 0.164706, 0.0941176, 0.0196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Go to menu"
+underline = 2
 
-[connection signal="pressed" from="Panel/LinkButton" to="." method="_on_LinkButton_pressed"]
+[node name="Coins" type="Label" parent="Panel"]
+anchor_right = 1.0
+margin_top = 63.0
+margin_bottom = 98.0
+custom_colors/font_color = Color( 0.372549, 0.219608, 0.054902, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "000"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Enemies" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -203.0
+margin_top = -112.5
+margin_right = 201.0
+margin_bottom = -77.5
+custom_colors/font_color = Color( 0.372549, 0.219608, 0.054902, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "000"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Panel/TryAgain" to="." method="_on_TryAgain_pressed"]
+[connection signal="pressed" from="Panel/goToMenu" to="." method="_on_goToMenu_pressed"]

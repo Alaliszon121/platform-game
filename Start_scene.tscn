@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://ASSETS/fonts/Alkalami-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://NPCs/portal/portal.tres" type="SpriteFrames" id=2]
@@ -24,9 +24,20 @@ size = 60
 outline_color = Color( 0.4, 0.141176, 0.0745098, 1 )
 font_data = ExtResource( 1 )
 
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 0.196078 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id=8]
+
 [sub_resource type="DynamicFont" id=4]
-size = 80
+size = 65
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -47,10 +58,10 @@ margin_bottom = 800.0
 color = Color( 0.596078, 0.796078, 0.937255, 1 )
 
 [node name="Panel2" type="Panel" parent="."]
-margin_left = 286.0
-margin_top = 84.0
-margin_right = 936.0
-margin_bottom = 358.0
+margin_left = 276.0
+margin_top = 43.0
+margin_right = 926.0
+margin_bottom = 317.0
 custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_group_": true
@@ -83,18 +94,58 @@ custom_colors/font_color = Color( 0.4, 0.141176, 0.0745098, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Traveller"
 
-[node name="LinkButton" type="LinkButton" parent="."]
-margin_left = 545.0
-margin_top = 440.0
-margin_right = 706.0
-margin_bottom = 592.0
+[node name="Panel" type="Panel" parent="."]
+margin_left = 393.0
+margin_top = 362.0
+margin_right = 867.0
+margin_bottom = 717.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="new_game_button" type="LinkButton" parent="Panel"]
+margin_left = 95.0
+margin_top = 127.0
+margin_right = 411.0
+margin_bottom = 260.0
 focus_mode = 2
+theme = SubResource( 8 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.235294, 0.235294, 0.235294, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0.00784314, 0, 0.25098, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Play"
+custom_styles/focus = SubResource( 9 )
+text = "New game"
+underline = 2
+
+[node name="achievements_button" type="LinkButton" parent="Panel"]
+margin_left = 31.0
+margin_top = 252.0
+margin_right = 464.0
+margin_bottom = 385.0
+focus_mode = 2
+theme = SubResource( 8 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.00784314, 0, 0.25098, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/focus = SubResource( 9 )
+text = "Achievements"
+underline = 2
+
+[node name="see_levels_button" type="LinkButton" parent="Panel"]
+margin_left = 96.0
+margin_top = 3.0
+margin_right = 364.0
+margin_bottom = 127.0
+focus_mode = 2
+theme = SubResource( 8 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.00784314, 0, 0.25098, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "See levels"
 underline = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -102,13 +153,14 @@ position = Vector2( 1089, 439 )
 scale = Vector2( 8.34335, 6.55388 )
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
-position = Vector2( 185, 432 )
+position = Vector2( 206, 432 )
 scale = Vector2( 8.125, 8.91207 )
 frames = SubResource( 6 )
 playing = true
 
-[connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="Panel/new_game_button" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="Panel/see_levels_button" to="." method="_on_see_levels_button_pressed"]

@@ -10,6 +10,8 @@ var jumps_left = 0
 var last_walljump_direction = 0
 var direction = 1
 
+var on_ladder := false
+
 const SPEED = 400
 const GRAVITY = 50
 const JUMPFORCE = -1300
@@ -17,6 +19,7 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
+	print(on_ladder)
 	match state:
 		States.AIR:
 			if is_on_floor():
@@ -71,6 +74,9 @@ func _physics_process(_delta):
 				$Sprite.flip_h = true
 			velocity.x = lerp(velocity.x, 0, 0.2)
 			move_and_fall()
+			
+		States.LADDER:
+			$Sprite.play("climb")
 
 func can_walljump():
 	if is_near_wall() and (jumps_left == 0) and (last_walljump_direction != direction):
@@ -124,3 +130,9 @@ func _on_NPC_dialogue_start():
 
 func _on_NPC_dialogue_end():
 	state = States.FLOOR
+
+func _on_LadderChecker_body_entered(body):
+	on_ladder = true
+
+func _on_LadderChecker_body_exited(body):
+	on_ladder = false

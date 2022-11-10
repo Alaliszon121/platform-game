@@ -153,14 +153,13 @@ position = Vector2( 1089, 439 )
 scale = Vector2( 8.34335, 6.55388 )
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 1
+frame = 6
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 206, 432 )
 scale = Vector2( 8.125, 8.91207 )
 frames = SubResource( 6 )
-frame = 2
 playing = true
 
 [connection signal="pressed" from="Panel/new_game_button" to="." method="_on_new_game_button_pressed"]

@@ -67,6 +67,7 @@ position = Vector2( 1.90735e-06, -8 )
 scale = Vector2( 2.60294, 2.60294 )
 frames = SubResource( 1 )
 animation = "walk"
+frame = 1
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

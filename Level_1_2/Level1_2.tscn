@@ -77,7 +77,7 @@ tile_set = ExtResource( 3 )
 collision_layer = 2
 collision_mask = 51
 format = 1
-tile_data = PoolIntArray( 65535, 9, 0, 0, 2, 0, 1, 2, 0, 2, 10, 0, 196613, 9, 0, 196614, 2, 0, 196615, 2, 0, 196616, 2, 0, 196617, 10, 0, 196629, 9, 0, 196630, 2, 0, 196631, 2, 0, 196632, 2, 0, 196633, 2, 0, 196634, 2, 0, 196635, 2, 0, 196636, 2, 0, 196637, 2, 0, 196638, 2, 0, 196639, 2, 0, 196640, 10, 0, 327697, 4, 0 )
+tile_data = PoolIntArray( 65531, 9, 0, 65532, 2, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 10, 0, 196613, 9, 0, 196614, 2, 0, 196615, 2, 0, 196616, 2, 0, 196617, 10, 0, 196629, 9, 0, 196630, 2, 0, 196631, 2, 0, 196632, 2, 0, 196633, 2, 0, 196634, 2, 0, 196635, 2, 0, 196636, 2, 0, 196637, 2, 0, 196638, 2, 0, 196639, 2, 0, 196640, 10, 0, 327697, 4, 0 )
 
 [node name="Tiles solid" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -102,6 +102,7 @@ __meta__ = {
 
 [node name="Camera2D" type="Camera2D" parent="Jerry"]
 current = true
+zoom = Vector2( 1.2, 1.2 )
 limit_left = -350
 limit_bottom = 700
 limit_smoothed = true
@@ -116,7 +117,7 @@ drag_margin_right = 0.3
 remote_path = NodePath("../Camera2D")
 
 [node name="Spike" parent="." instance=ExtResource( 7 )]
-position = Vector2( 112, 83 )
+position = Vector2( -244, 82 )
 
 [node name="Spike2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1000, 637 )

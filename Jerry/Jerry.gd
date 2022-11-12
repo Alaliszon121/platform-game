@@ -19,7 +19,6 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
-	#print(on_ladder)
 	match state:
 		States.AIR:
 			if is_on_floor():
@@ -29,6 +28,9 @@ func _physics_process(_delta):
 				if Input.is_action_pressed("ui_up") and ((Input.is_action_pressed("ui_left") and direction == 1) or (Input.is_action_pressed("ui_right") and direction == -1)):
 					last_walljump_direction = direction
 					velocity.y = JUMPFORCE
+			elif can_climb():
+				state = States.LADDER
+				continue
 			$Sprite.play("jump")
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
@@ -49,6 +51,10 @@ func _physics_process(_delta):
 			if not is_on_floor():
 				jumps_left = 1
 				state = States.AIR
+				continue
+			elif can_climb():
+				state = States.LADDER
+				continue
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
 				$Sprite.play("walk")
@@ -76,7 +82,39 @@ func _physics_process(_delta):
 			move_and_fall()
 			
 		States.LADDER:
-			$Sprite.play("climb")
+			if not on_ladder:
+				state = States.AIR
+			elif is_on_floor() and Input.is_action_pressed("ui_down"):
+				Input.action_release("ui_down")
+				Input.action_release("ui_up")
+				state = States.FLOOR
+			
+			if Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down"):
+				$Sprite.play("climb")
+				$Sprite.playing = true
+			else:
+				$Sprite.playing = false
+			
+			if Input.is_action_pressed("ui_up"):
+				velocity.y = -SPEED * 0.8
+				velocity.x = 0
+			elif Input.is_action_pressed("ui_down"):
+				velocity.y = SPEED * 0.8
+				velocity.x = 0
+			else:
+				velocity.y = lerp(velocity.y, 0, 0.3)
+			
+			if Input.is_action_pressed("ui_right"):
+				velocity.x = SPEED * 0.5
+			elif Input.is_action_pressed("ui_left"):
+				velocity.x = -SPEED * 0.5
+			velocity = move_and_slide(velocity, Vector2.UP)
+
+func can_climb():
+	if on_ladder and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down")):
+		return true
+	else:
+		return false
 
 func can_walljump():
 	if is_near_wall() and (jumps_left == 0) and (last_walljump_direction != direction):
@@ -136,3 +174,5 @@ func _on_LadderChecker_body_entered(body):
 
 func _on_LadderChecker_body_exited(body):
 	on_ladder = false
+	
+

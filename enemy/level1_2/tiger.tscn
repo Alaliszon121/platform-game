@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ASSETS/enemies/level1_2/tiger/t2.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/enemies/level1_2/tiger/t3.png" type="Texture" id=2]
@@ -14,13 +14,17 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 55.7499, 160.5 )
+extents = Vector2( 39.0002, 111.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 143, 6 )
+extents = Vector2( 106.5, 6 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 153.5, 52.25 )
+extents = Vector2( 121.5, 26.5 )
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 34.0
+height = 578.0
 
 [node name="Tiger" type="KinematicBody2D"]
 collision_layer = 16
@@ -28,37 +32,37 @@ collision_mask = 3
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 2.60294, 2.60294 )
+position = Vector2( 1.90735e-06, 0 )
+scale = Vector2( 1.64516, 1.64516 )
 frames = SubResource( 4 )
 animation = "run"
 frame = 2
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 8.5, 8.2501 )
+[node name="TigerCollision" type="CollisionShape2D" parent="."]
+position = Vector2( 2.49992, -0.000206947 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="floor_checker" type="RayCast2D" parent="."]
-position = Vector2( 169, -8 )
+show_behind_parent = true
+position = Vector2( 114, 0 )
 enabled = true
-cast_to = Vector2( 0, 86 )
+cast_to = Vector2( 0, 53 )
 collision_mask = 2
 
 [node name="top_checker" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="top_checker"]
-position = Vector2( 6, -55 )
+position = Vector2( 2.5, -48 )
 shape = SubResource( 2 )
 
 [node name="sides_checker" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sides_checker"]
-position = Vector2( 7, 7 )
+position = Vector2( 2.5, -2.5 )
 shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -68,7 +72,15 @@ one_shot = true
 [node name="Immortality_timer" type="Timer" parent="."]
 wait_time = 0.5
 
+[node name="player_target" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_target"]
+rotation = 1.5708
+shape = SubResource( 5 )
+
 [connection signal="body_entered" from="top_checker" to="." method="_on_top_checker_body_entered"]
 [connection signal="body_entered" from="sides_checker" to="." method="_on_sides_checker_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Immortality_timer" to="." method="_on_Immortality_timer_timeout"]
+[connection signal="body_entered" from="player_target" to="." method="_on_player_target_body_entered"]

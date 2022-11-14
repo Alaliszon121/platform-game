@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Level_1_2/level_1_2_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Level_1_2/level_1_2_tiles_pass_through.tres" type="TileSet" id=2]
@@ -15,6 +15,10 @@
 [ext_resource path="res://Level_1/HUD.gd" type="Script" id=13]
 [ext_resource path="res://Coin/level1_2/Coin.tscn" type="PackedScene" id=14]
 [ext_resource path="res://ASSETS/coins/level1_2/coin1.png" type="Texture" id=15]
+[ext_resource path="res://map_mechanics/Trapdoor.tscn" type="PackedScene" id=16]
+[ext_resource path="res://NPCs/level1_2/sign/Sign.tscn" type="PackedScene" id=17]
+[ext_resource path="res://NPCs/portal/Portal.tscn" type="PackedScene" id=18]
+[ext_resource path="res://NPCs/level1/book/Book.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
@@ -90,13 +94,14 @@ tile_set = ExtResource( 2 )
 collision_layer = 0
 collision_mask = 0
 format = 1
+tile_data = PoolIntArray( 0, 1, 0 )
 
 [node name="Tiles solid one way" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
 collision_layer = 2
 collision_mask = 51
 format = 1
-tile_data = PoolIntArray( 65531, 9, 0, 65532, 2, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 10, 0, 196613, 9, 0, 196614, 2, 0, 196615, 2, 0, 196616, 2, 0, 196617, 10, 0, 196629, 9, 0, 196630, 2, 0, 196631, 2, 0, 196632, 2, 0, 196633, 2, 0, 196634, 2, 0, 196635, 2, 0, 196636, 2, 0, 196637, 2, 0, 196638, 2, 0, 196639, 2, 0, 196640, 10, 0, 327697, 4, 0 )
+tile_data = PoolIntArray( 65531, 9, 0, 65532, 2, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 1, 2, 0, 2, 10, 0, 196613, 9, 0, 196614, 2, 0, 196615, 2, 0, 196616, 2, 0, 196617, 10, 0, 196629, 9, 0, 196630, 2, 0, 196631, 2, 0, 196632, 2, 0, 196633, 2, 0, 196634, 2, 0, 196635, 2, 0, 196636, 2, 0, 196637, 2, 0, 196638, 2, 0, 196639, 2, 0, 196640, 10, 0, 327697, 4, 0 )
 
 [node name="Tiles solid" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -112,8 +117,22 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0 )
 
+[node name="Trapdoor" parent="." instance=ExtResource( 16 )]
+position = Vector2( 32, 8 )
+
+[node name="Sign" parent="." instance=ExtResource( 17 )]
+position = Vector2( 480, 456 )
+
+[node name="Portal" parent="." instance=ExtResource( 18 )]
+position = Vector2( 832, 40 )
+rotation = -1.5708
+scale = Vector2( 2.45177, 2.45177 )
+
+[node name="Book2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 904, 472 )
+
 [node name="Jerry" parent="." instance=ExtResource( 6 )]
-position = Vector2( 848, 448 )
+position = Vector2( 832, 88 )
 collision_mask = 31
 __meta__ = {
 "_edit_group_": true
@@ -240,6 +259,10 @@ position = Vector2( -247, -55 )
 [node name="Coin2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1724, 458 )
 
+[connection signal="dialogue_end" from="Sign" to="Jerry" method="_on_NPC_dialogue_end"]
+[connection signal="dialogue_start" from="Sign" to="Jerry" method="_on_NPC_dialogue_start"]
+[connection signal="dialogue_end" from="Book2" to="Jerry" method="_on_NPC_dialogue_end"]
+[connection signal="dialogue_start" from="Book2" to="Jerry" method="_on_NPC_dialogue_start"]
 [connection signal="damaged" from="Jerry" to="hearts" method="_on_Jerry_damaged"]
 [connection signal="timeout" from="hearts/Timer" to="hearts" method="_on_Timer_timeout"]
 [connection signal="coin_collected" from="Coin" to="HUD" method="_on_Coin_coin_collected"]

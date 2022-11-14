@@ -1,0 +1,85 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"...Homo Sapiens na poczatku powstania gatunku znajdowal sie niemal na samym dole lancucha pokarmowego wszystkich stworzen...\""
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Czyli wszystko bedzie chcialo mnie tutaj zjesc. Jak cudownie."
+		},
+		{
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"...Dopoki nie nauczyl sie jak poslugiwac sie ogniem. Zapewnilo mu to cieplo, obrone, pozywiejsze jedzenie a w pozniejszym czasie umozliwilo rozwoj rolnictwa i przeroznego rzemiosla...\""
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A ja nie mam przy sobie zapalek. Cholerka."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sprobuje znalezc jakies inne zrodlo ognia. To na pewno latwizna."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Chyba..."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1668442491.json",
+		"name": "Book2"
+	}
+}

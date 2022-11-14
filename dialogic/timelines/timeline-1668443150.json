@@ -1,0 +1,61 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "sign2",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "W Erze Jaskoniowcow pojawiaja sie stalaktyty i stalagmity. Uwazaj na glowe i pod nogi!"
+		},
+		{
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wrogowie sa szybsi i moga cie wkryc, nawet jesli jestes za nimi. Uwazaj!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1668443150.json",
+		"name": "Sign2"
+	}
+}

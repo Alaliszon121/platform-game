@@ -13,6 +13,7 @@ func _on_Area2D_body_entered(body):
 		new_dialog.connect("timeline_end", self, 'dino_gone')
 
 func dino_gone(_timeline_name):
+	PlayerData.is_dialog_playing = false
 	passed_level1 = true
 	can_be_saved()
 	$Timer.start()

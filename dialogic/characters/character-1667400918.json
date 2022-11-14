@@ -2,7 +2,7 @@
 	"color": "#ffeaae6e",
 	"description": "",
 	"display_name": " ",
-	"display_name_bool": true,
+	"display_name_bool": false,
 	"id": "character-1667400918.json",
 	"mirror_portraits": false,
 	"name": "Sign",
@@ -14,6 +14,10 @@
 		{
 			"name": "Default",
 			"path": "res://ASSETS/npcs/sign/sign1.png"
+		},
+		{
+			"name": "sign2",
+			"path": "res://ASSETS/npcs/sign/sign2.png"
 		}
 	],
 	"scale": 500,

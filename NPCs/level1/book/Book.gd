@@ -7,7 +7,7 @@ func _ready():
 	if !PlayerData.is_dialogue_book_played:
 		PlayerData.is_dialogue_book_played = true
 		PlayerData.is_dialog_playing = true
-		var new_dialog = Dialogic.start('Book1')
+		var new_dialog = Dialogic.start(name)
 		add_child(new_dialog)
 		emit_signal("dialogue_start")
 		new_dialog.connect("timeline_end", self, 'book_gone')

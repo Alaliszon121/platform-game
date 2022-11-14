@@ -127,6 +127,7 @@ position = Vector2( 480, 456 )
 position = Vector2( 832, 40 )
 rotation = -1.5708
 scale = Vector2( 2.45177, 2.45177 )
+frame = 7
 
 [node name="Book2" parent="." instance=ExtResource( 19 )]
 position = Vector2( 904, 472 )

@@ -24,7 +24,7 @@ extents = Vector2( 121.5, 26.5 )
 
 [sub_resource type="CapsuleShape2D" id=5]
 radius = 34.0
-height = 578.0
+height = 614.0
 
 [node name="Tiger" type="KinematicBody2D"]
 collision_layer = 16
@@ -36,7 +36,7 @@ position = Vector2( 1.90735e-06, 0 )
 scale = Vector2( 1.64516, 1.64516 )
 frames = SubResource( 4 )
 animation = "run"
-frame = 1
+frame = 2
 playing = true
 
 [node name="TigerCollision" type="CollisionShape2D" parent="."]

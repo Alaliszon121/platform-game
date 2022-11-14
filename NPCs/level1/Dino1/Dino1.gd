@@ -11,6 +11,7 @@ func _on_Area2D_body_entered(body):
 		var new_dialog = Dialogic.start('Dino1')
 		add_child(new_dialog)
 		new_dialog.connect("timeline_end", self, 'dino_gone')
+		PlayerData.is_dialogue_book_played = false
 
 func dino_gone(_timeline_name):
 	PlayerData.is_dialog_playing = false

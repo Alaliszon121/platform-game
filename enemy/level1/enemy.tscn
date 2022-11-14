@@ -9,10 +9,10 @@
 extents = Vector2( 26.5, 33.25 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 39, 6 )
+extents = Vector2( 37.5, 6 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 42, 26.5 )
+extents = Vector2( 44.5, 26.5 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -52,14 +52,14 @@ collision_mask = 2
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="top_checker"]
-position = Vector2( 1, -25 )
+position = Vector2( 2.5, -25 )
 shape = SubResource( 3 )
 
 [node name="sides_checker" type="Area2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sides_checker"]
-position = Vector2( 1, 8.5 )
+position = Vector2( 2.5, 8.5 )
 shape = SubResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

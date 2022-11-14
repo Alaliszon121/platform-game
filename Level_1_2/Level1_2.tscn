@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Level_1_2/level_1_2_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Level_1_2/level_1_2_tiles_pass_through.tres" type="TileSet" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://ASSETS/hearts/heart.png" type="Texture" id=9]
 [ext_resource path="res://Level_1/hearts.gd" type="Script" id=10]
 [ext_resource path="res://enemy/level1_2/tiger.tscn" type="PackedScene" id=11]
+[ext_resource path="res://ASSETS/fonts/Alkalami-Regular.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Level_1/HUD.gd" type="Script" id=13]
+[ext_resource path="res://Coin/level1_2/Coin.tscn" type="PackedScene" id=14]
+[ext_resource path="res://ASSETS/coins/level1_2/coin1.png" type="Texture" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
@@ -61,6 +65,21 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.160784, 0.211765, 0.258824, 0.721569 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=5]
+size = 70
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 12 )
 
 [node name="Level1_2" type="Node2D"]
 
@@ -138,37 +157,90 @@ direction = -1
 position = Vector2( 1241, 637 )
 direction = -1
 
+[node name="Tiger" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1734, 439 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 13 )
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 8.0
+margin_top = 9.0
+margin_right = 258.0
+margin_bottom = 131.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel"]
+margin_left = 27.0
+margin_top = 6.0
+margin_right = 101.0
+margin_bottom = 95.0
+texture = ExtResource( 15 )
+expand = true
+
+[node name="Coins" type="Label" parent="HUD/Panel"]
+anchor_left = 0.105
+anchor_top = 0.102
+anchor_right = 0.105
+anchor_bottom = 0.102
+margin_left = 126.75
+margin_top = -0.444
+margin_right = 212.75
+margin_bottom = 132.556
+custom_colors/font_color = Color( 0.72549, 0.811765, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "X"
+align = 1
+
+[node name="Label" type="Label" parent="HUD/Panel"]
+anchor_left = 0.105
+anchor_top = 0.102
+anchor_right = 0.105
+anchor_bottom = 0.102
+margin_left = 93.75
+margin_top = 22.556
+margin_right = 124.75
+margin_bottom = 99.556
+custom_colors/font_color = Color( 0.72549, 0.811765, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "X"
+
 [node name="hearts" type="CanvasLayer" parent="."]
 script = ExtResource( 10 )
 
 [node name="heart" type="TextureRect" parent="hearts"]
-margin_left = 4.0
-margin_top = 2.0
-margin_right = 96.0
-margin_bottom = 94.0
+margin_left = 13.0
+margin_top = 133.0
+margin_right = 105.0
+margin_bottom = 225.0
 texture = ExtResource( 9 )
 expand = true
 
 [node name="heart2" type="TextureRect" parent="hearts"]
-margin_left = 78.0
-margin_top = 3.0
-margin_right = 170.0
-margin_bottom = 95.0
+margin_left = 87.0
+margin_top = 134.0
+margin_right = 179.0
+margin_bottom = 226.0
 texture = ExtResource( 9 )
 expand = true
 
 [node name="heart3" type="TextureRect" parent="hearts"]
-margin_left = 153.0
-margin_top = 4.0
-margin_right = 245.0
-margin_bottom = 96.0
+margin_left = 162.0
+margin_top = 135.0
+margin_right = 254.0
+margin_bottom = 227.0
 texture = ExtResource( 9 )
 expand = true
 
 [node name="Timer" type="Timer" parent="hearts"]
 
-[node name="Tiger" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1734, 439 )
+[node name="Coin" parent="." instance=ExtResource( 14 )]
+position = Vector2( -247, -55 )
+
+[node name="Coin2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1724, 458 )
 
 [connection signal="damaged" from="Jerry" to="hearts" method="_on_Jerry_damaged"]
 [connection signal="timeout" from="hearts/Timer" to="hearts" method="_on_Timer_timeout"]
+[connection signal="coin_collected" from="Coin" to="HUD" method="_on_Coin_coin_collected"]
+[connection signal="coin_collected" from="Coin2" to="HUD" method="_on_Coin_coin_collected"]

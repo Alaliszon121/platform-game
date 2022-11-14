@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Coin/level1/AnimatedSprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Coin/Coin.gd" type="Script" id=4]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 26.3636
+height = 26.0
+
+[node name="Coin" type="Area2D"]
+collision_layer = 8
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" parent="." instance=ExtResource( 1 )]
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -6 )
+scale = Vector2( 1.1, 1.1 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]

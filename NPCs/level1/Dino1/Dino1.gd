@@ -19,7 +19,7 @@ func dino_gone(_timeline_name):
 
 func _on_Timer_timeout():
 	PlayerData.is_dialog_playing = false
-	get_tree().change_scene("res://Winner_scene.tscn")
+	get_tree().change_scene("res://Level_1_2/Level1_2.tscn")
 
 func can_be_saved():
 	var file = File.new()

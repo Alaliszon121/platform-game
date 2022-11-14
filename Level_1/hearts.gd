@@ -14,7 +14,7 @@ func _on_Jerry_damaged():
 		$Timer.start()
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Level_1_2/Level1_2.tscn")
+	get_tree().change_scene("res://Level_1/Level1.tscn")
 
 func _on_Health_potion_health_gained():
 	if hearts < 3:

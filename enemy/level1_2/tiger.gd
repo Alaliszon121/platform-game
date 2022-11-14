@@ -23,7 +23,7 @@ func _physics_process(_delta):
 func _on_top_checker_body_entered(body):
 	$sides_checker.set_collision_layer_bit(4, false)
 	$sides_checker.set_collision_mask_bit(0, false)
-	$AnimatedSprite.play("dead")
+	#$AnimatedSprite.play("dead")
 	speed = 0
 	set_collision_layer_bit(4, false)
 	set_collision_mask_bit(0, false)

@@ -8,6 +8,6 @@ func update_coins():
 	$Panel/Coins.text = String(PlayerData.coins)
 
 func _on_Coin_coin_collected():
-	PlayerData.coins = PlayerData.coins +1
+	PlayerData.coins = PlayerData.coins + 1
 	update_coins()
 

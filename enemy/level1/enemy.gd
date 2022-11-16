@@ -22,21 +22,17 @@ func _physics_process(_delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func _on_top_checker_body_entered(body):
-	$sides_checker.set_collision_layer_bit(4, false)
 	$sides_checker.set_collision_mask_bit(0, false)
 	$AnimatedSprite.play("dead")
 	speed = 0
 	set_collision_layer_bit(4, false)
 	set_collision_mask_bit(0, false)
-	$top_checker.set_collision_layer_bit(4, false)
 	$top_checker.set_collision_mask_bit(0, false)
 	$Timer.start()
 	body.bounce()
 
 func _on_sides_checker_body_entered(body):
-	$top_checker.set_collision_layer_bit(4, false)
 	$top_checker.set_collision_mask_bit(0, false)
-	$sides_checker.set_collision_layer_bit(4, false)
 	$sides_checker.set_collision_mask_bit(0, false)
 	$Immortality_timer.start()
 	body.damaged(position.x)
@@ -46,7 +42,5 @@ func _on_Timer_timeout():
 	queue_free()
 
 func _on_Immortality_timer_timeout():
-	$top_checker.set_collision_layer_bit(4, true)
 	$top_checker.set_collision_mask_bit(0, true)
-	$sides_checker.set_collision_layer_bit(4, true)
 	$sides_checker.set_collision_mask_bit(0, true)

@@ -262,87 +262,89 @@ position = Vector2( 8864, 136 )
 [node name="Trapdoor5" parent="." instance=ExtResource( 22 )]
 position = Vector2( 9248, 136 )
 
-[node name="enemy" parent="." instance=ExtResource( 15 )]
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="enemy" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 1, 0.603922, 0.964706, 1 )
 position = Vector2( -88, -364 )
 
-[node name="enemy2" parent="." instance=ExtResource( 15 )]
+[node name="enemy2" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.466667, 0.513726, 1, 1 )
 position = Vector2( 592, -42 )
 direction = -1
 
-[node name="enemy3" parent="." instance=ExtResource( 15 )]
+[node name="enemy3" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 1, 0.933333, 0.501961, 1 )
 position = Vector2( 1728, -54 )
 
-[node name="enemy4" parent="." instance=ExtResource( 15 )]
+[node name="enemy4" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 1, 0.482353, 0.482353, 1 )
 position = Vector2( 2181, -371 )
 direction = -1
 
-[node name="enemy5" parent="." instance=ExtResource( 15 )]
+[node name="enemy5" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.411765, 0.819608, 1, 1 )
 position = Vector2( 1768, 463 )
 
-[node name="enemy6" parent="." instance=ExtResource( 15 )]
+[node name="enemy6" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.470588, 1, 0.454902, 1 )
 position = Vector2( 2766, 81 )
 direction = -1
 
-[node name="enemy7" parent="." instance=ExtResource( 15 )]
+[node name="enemy7" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.537255, 0.6, 0.992157, 1 )
 position = Vector2( 3425, -360 )
 
-[node name="enemy8" parent="." instance=ExtResource( 15 )]
+[node name="enemy8" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.980392, 0.517647, 0.517647, 1 )
 position = Vector2( 3603, 463 )
 direction = -1
 
-[node name="enemy9" parent="." instance=ExtResource( 15 )]
+[node name="enemy9" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.435294, 0.996078, 0.905882, 1 )
 position = Vector2( 4178, 141 )
 
-[node name="enemy10" parent="." instance=ExtResource( 15 )]
+[node name="enemy10" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.992157, 0.607843, 0.956863, 1 )
 position = Vector2( 4808, 404 )
 direction = -1
 
-[node name="enemy11" parent="." instance=ExtResource( 15 )]
+[node name="enemy11" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 1, 0.972549, 0.576471, 1 )
 position = Vector2( 7061, 469 )
 
-[node name="enemy12" parent="." instance=ExtResource( 15 )]
+[node name="enemy12" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 1, 0.803922, 0.576471, 1 )
 position = Vector2( 7295, 217 )
 direction = -1
 
-[node name="enemy13" parent="." instance=ExtResource( 15 )]
+[node name="enemy13" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 1, 0.576471, 0.576471, 1 )
 position = Vector2( 7784, 470 )
 
-[node name="enemy14" parent="." instance=ExtResource( 15 )]
+[node name="enemy14" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.827451, 0.576471, 1, 1 )
 position = Vector2( 8410, 470 )
 direction = -1
 
-[node name="enemy15" parent="." instance=ExtResource( 15 )]
+[node name="enemy15" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.576471, 0.870588, 1, 1 )
 position = Vector2( 7937, -436 )
 
-[node name="enemy16" parent="." instance=ExtResource( 15 )]
+[node name="enemy16" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.372549, 0.956863, 0.364706, 1 )
 position = Vector2( 9157, 468 )
 
-[node name="enemy17" parent="." instance=ExtResource( 15 )]
+[node name="enemy17" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.956863, 0.921569, 0.364706, 1 )
 position = Vector2( 9925, 474 )
 direction = -1
 
-[node name="enemy18" parent="." instance=ExtResource( 15 )]
+[node name="enemy18" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.956863, 0.517647, 0.364706, 1 )
 position = Vector2( 10367, 473 )
 
-[node name="enemy19" parent="." instance=ExtResource( 15 )]
+[node name="enemy19" parent="Enemy" instance=ExtResource( 15 )]
 modulate = Color( 0.364706, 0.388235, 0.956863, 1 )
 position = Vector2( 10701, -1073 )
 direction = -1
@@ -452,7 +454,7 @@ rotation = -1.5708
 scale = Vector2( 3.29284, 3.29284 )
 frame = 5
 
-[node name="Sign" parent="." instance=ExtResource( 18 )]
+[node name="Sign1" parent="." instance=ExtResource( 18 )]
 position = Vector2( 563, 449 )
 
 [node name="Jerry" parent="." instance=ExtResource( 2 )]
@@ -594,8 +596,8 @@ expand = true
 [connection signal="coin_collected" from="Coins/Coin27" to="HUD" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin28" to="HUD" method="_on_Coin_coin_collected"]
 [connection signal="body_entered" from="Area2D" to="Jerry" method="_on_Area2D_body_entered"]
-[connection signal="dialogue_end" from="Sign" to="Jerry" method="_on_NPC_dialogue_end"]
-[connection signal="dialogue_start" from="Sign" to="Jerry" method="_on_NPC_dialogue_start"]
+[connection signal="dialogue_end" from="Sign1" to="Jerry" method="_on_NPC_dialogue_end"]
+[connection signal="dialogue_start" from="Sign1" to="Jerry" method="_on_NPC_dialogue_start"]
 [connection signal="damaged" from="Jerry" to="hearts" method="_on_Jerry_damaged"]
 [connection signal="dialogue_end" from="Book1" to="Jerry" method="_on_NPC_dialogue_end"]
 [connection signal="dialogue_start" from="Book1" to="Jerry" method="_on_NPC_dialogue_start"]

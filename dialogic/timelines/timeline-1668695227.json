@@ -1,0 +1,95 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1668695241.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"condition": "",
+			"definition": "1668695415-907",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1668695241.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dziekuje za zabicie tych groznych Tomow! Balam sie ze juz po mnie!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1668695415-907",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1668695241.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Blagam pomoz mi! Ocal mnie od tych Tomow!"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tomow? ja tu widze tylko tygrysy..."
+		},
+		{
+			"character": "character-1668695241.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "O czym ty gadasz? Nad ta skrytka czaja sie dwa wielkie, fioletowe Tomy! Ocal mnie, prosze..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1668695227.json",
+		"name": "cavewoman"
+	}
+}

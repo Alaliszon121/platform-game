@@ -3,6 +3,11 @@
 
 	],
 	"variables": [
-
+		{
+			"id": "1668695415-907",
+			"name": "is_cavewoman_rescued",
+			"type": 0,
+			"value": "false"
+		}
 	]
 }

@@ -1,0 +1,21 @@
+{
+	"color": "#fff470cd",
+	"description": "",
+	"display_name": "Pani Jaskinowiec",
+	"display_name_bool": true,
+	"id": "character-1668695241.json",
+	"mirror_portraits": false,
+	"name": "cavewoman",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -180,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ASSETS/npcs/cavewoman/cavewoman3.png"
+		}
+	],
+	"scale": 600,
+	"theme": ""
+}

@@ -91,7 +91,6 @@ PlayerData="*res://Data/player_data.gd"
 [debug]
 
 settings/fps/force_fps=60
-settings/stdout/print_fps=true
 
 [display]
 
@@ -107,6 +106,7 @@ enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
 [global]
 
 FPS=false
+fps=false
 
 [gui]
 

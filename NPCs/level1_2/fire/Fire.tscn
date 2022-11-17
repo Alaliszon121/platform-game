@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ASSETS/enemies/level1_2/fire/f2.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/enemies/level1_2/fire/f3.png" type="Texture" id=2]
 [ext_resource path="res://ASSETS/enemies/level1_2/fire/f1.png" type="Texture" id=3]
+[ext_resource path="res://NPCs/level1_2/fire/Fire.gd" type="Script" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -13,14 +14,15 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 72.0
-height = 176.0
+radius = 54.6665
+height = 116.0
 
 [node name="Fire" type="AnimatedSprite"]
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
-frame = 2
+frame = 1
 playing = true
+script = ExtResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
@@ -29,3 +31,5 @@ collision_layer = 0
 position = Vector2( 0, -24 )
 rotation = 1.5708
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

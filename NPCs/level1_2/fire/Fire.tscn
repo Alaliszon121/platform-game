@@ -15,12 +15,12 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 54.6665
-height = 116.0
+height = 64.0004
 
-[node name="Fire" type="AnimatedSprite"]
+[node name="fire" type="AnimatedSprite"]
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 script = ExtResource( 4 )
 

@@ -1,0 +1,229 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"condition": "",
+			"definition": "1668705515-748",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hej! Wiesz moze gdzie znajde portal?"
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A wiem. Ale nie powiem."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A moglbym cie jakos przekonac zebys mi powiedzial?"
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ano tak. Musisz tylko przyniesc mi ogien. Zimno mi."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1668705387-642",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mam ogien! Prosze, oto on."
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dziekuje"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Too powiesz mi teraz?"
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A uratowales moja zone? "
+		},
+		{
+			"condition": "",
+			"definition": "1668695415-907",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To wroc sie i ja uratuj. Zostawilem ja wczoraj zeby zjadl ja Tom, bo mnie wkurzala."
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ale jednak chcialbym ja z powrotem. Nikt tak dobrze nie przygotowuje pieczonych Tomow jak ona..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1668695415-907",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tak"
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To dobrze. Powiem Ci."
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Przejscie jest za moimi plecami. Powodzenia w podrozy."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dziekuje"
+		},
+		{
+			"definition": "1668708262-246",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1668705387-642",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nie mam ognia..."
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To musisz mi go przyniesc. Wtedy Ci powiem."
+		},
+		{
+			"condition": "",
+			"definition": "1668695415-907",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A! Prawie zapomnialem. Po drodze uratuj moja zone. Zostawilem ja zeby zjadl ja Tom, bo mnie wkurzala."
+		},
+		{
+			"character": "character-1668705411.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ale jednak chcialbym ja z powrotem. Nikt tak dobrze nie przygotowuje pieczonych Tomow jak ona..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okej, w porzadku..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1668705476.json",
+		"name": "caveman"
+	}
+}

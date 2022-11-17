@@ -1,16 +1,36 @@
 extends CanvasLayer
 
+enum States {IDLE, COUNTING}
+var state
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+signal has_fire
+signal lost_fire
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	state = States.IDLE
 
+func _physics_process(_delta):
+	match state:
+		States.IDLE:
+			continue
+		States.COUNTING:
+			$PanelTimer/Time.text = String(round($Timer.get_time_left()))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Fire_fire_collected():
+	$Timer.start()
+	state = States.COUNTING
+	visible = true
+	emit_signal("has_fire")
+
+func _on_Timer_timeout():
+	print("koniec odliczania")
+	state = States.IDLE
+	visible = false
+	emit_signal("lost_fire")
+
+func _stop_fire_timer():
+	$Timer.set_paused(true)
+
+func _start_fire_timer():
+	$Timer.set_paused(false)
+	print($Timer.is_paused())

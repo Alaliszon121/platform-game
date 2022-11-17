@@ -1,0 +1,21 @@
+{
+	"color": "#ff38d7fc",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1668705411.json",
+	"mirror_portraits": false,
+	"name": "caveman",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -180,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ASSETS/npcs/caveman1/caveman3.png"
+		}
+	],
+	"scale": 600,
+	"theme": ""
+}

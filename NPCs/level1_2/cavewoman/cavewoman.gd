@@ -6,6 +6,9 @@ var can_be_played := true
 signal dialogue_start
 signal dialogue_end
 
+signal stop_fire_timer
+signal start_fire_timer
+
 signal cavewoman_rescued
 
 func _ready():
@@ -21,6 +24,7 @@ func _on_Area2D_body_entered(body):
 		PlayerData.is_dialog_playing = true
 		var new_dialog = Dialogic.start(name)
 		add_child(new_dialog)
+		emit_signal("stop_fire_timer")
 		emit_signal("dialogue_start")
 		can_be_played = false
 		new_dialog.connect("timeline_end", self, 'dialog_ended')
@@ -32,6 +36,7 @@ func dialog_ended(_timeline_name):
 		$mark.queue_free()
 	else:
 		$Timer.start()
+	emit_signal("start_fire_timer")
 	emit_signal("dialogue_end")
 	PlayerData.is_dialog_playing = false
 

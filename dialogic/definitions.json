@@ -8,6 +8,24 @@
 			"name": "is_cavewoman_rescued",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1668705515-748",
+			"name": "first_time_talked_to_caveman",
+			"type": 0,
+			"value": "true"
+		},
+		{
+			"id": "1668705387-642",
+			"name": "is_player_has_fire",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1668708262-246",
+			"name": "is_caveman_happy",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }

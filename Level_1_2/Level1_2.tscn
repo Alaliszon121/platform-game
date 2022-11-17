@@ -157,7 +157,7 @@ position = Vector2( 4896, -440 )
 position = Vector2( 832, 40 )
 rotation = -1.5708
 scale = Vector2( 2.45177, 2.45177 )
-frame = 2
+frame = 0
 
 [node name="Jerry" parent="." instance=ExtResource( 6 )]
 position = Vector2( 832, 72 )
@@ -521,7 +521,7 @@ collision_layer = 2
 [node name="Portal" parent="NPCs" instance=ExtResource( 18 )]
 position = Vector2( 11968, -504 )
 scale = Vector2( 3.58849, 3.98594 )
-frame = 4
+frame = 2
 script = ExtResource( 29 )
 
 [node name="Area2D" type="Area2D" parent="NPCs/Portal"]
@@ -623,7 +623,6 @@ __meta__ = {
 position = Vector2( 48, 56 )
 scale = Vector2( 4.76667, 4.76667 )
 frames = SubResource( 7 )
-frame = 1
 playing = true
 
 [node name="Time" type="Label" parent="HUDTimer/PanelTimer"]

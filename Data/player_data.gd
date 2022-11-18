@@ -5,4 +5,4 @@ var enemies_killed = 0
 var is_dialog_playing = false
 var is_dialogue_book_played = false
 
-const SAVE_PATH = "user://save_data.json"
+const SAVE_PATH = "user://game_saved_data.json"

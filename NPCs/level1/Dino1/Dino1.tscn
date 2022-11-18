@@ -19,7 +19,7 @@ height = 16.0
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 111.0
-height = 126.0
+height = 244.0
 
 [node name="DinoNPC" type="KinematicBody2D"]
 collision_layer = 16
@@ -38,17 +38,16 @@ shape = SubResource( 2 )
 
 [node name="mark" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -54 )
-frame = 1
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Player_checker" type="Area2D" parent="."]
 collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_checker"]
 position = Vector2( 1, -77 )
 rotation = 1.5708
 shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Player_checker" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://ASSETS/WorldTiles/level1/tileYellow_04.png" type="Texture" id=1]
 [ext_resource path="res://Jerry/Jerry.tscn" type="PackedScene" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://ASSETS/WorldTiles/level1/tileYellow_05.png" type="Texture" id=24]
 [ext_resource path="res://ASSETS/WorldTiles/level1/tileYellow_08.png" type="Texture" id=25]
 [ext_resource path="res://ASSETS/npcs/sign/arrow1.png" type="Texture" id=26]
+[ext_resource path="res://Level_1/Portal.gd" type="Script" id=27]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tileYellow_04.png 0"
@@ -162,6 +163,10 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7609.5, 91.5 )
+
+[sub_resource type="CapsuleShape2D" id=11]
+radius = 13.3762
+height = 21.4169
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.215686, 0.160784, 0.258824, 0.721569 )
@@ -452,13 +457,13 @@ shape = SubResource( 2 )
 position = Vector2( 1123, 28 )
 rotation = -1.5708
 scale = Vector2( 3.29284, 3.29284 )
-frame = 7
+frame = 3
 
 [node name="Sign1" parent="." instance=ExtResource( 18 )]
 position = Vector2( 563, 449 )
 
 [node name="Jerry" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1125, 56 )
+position = Vector2( 1123, 56 )
 collision_mask = 31
 __meta__ = {
 "_edit_group_": true
@@ -473,6 +478,7 @@ limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
+smoothing_speed = 10.0
 drag_margin_left = 0.3
 drag_margin_right = 0.3
 
@@ -483,7 +489,26 @@ remote_path = NodePath("../Camera2D")
 position = Vector2( 1199, 474 )
 
 [node name="DinoNPC" parent="." instance=ExtResource( 16 )]
-position = Vector2( 13360, -224 )
+position = Vector2( 13339, -231 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Portal2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 14078, -320 )
+scale = Vector2( 3.58849, 3.98594 )
+frame = 2
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Portal2"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal2/Area2D"]
+position = Vector2( -2.22925, 0 )
+shape = SubResource( 11 )
 
 [node name="Health_potion" parent="." instance=ExtResource( 13 )]
 position = Vector2( 7372, -434 )
@@ -601,7 +626,9 @@ expand = true
 [connection signal="damaged" from="Jerry" to="hearts" method="_on_Jerry_damaged"]
 [connection signal="dialogue_end" from="Book1" to="Jerry" method="_on_NPC_dialogue_end"]
 [connection signal="dialogue_start" from="Book1" to="Jerry" method="_on_NPC_dialogue_start"]
+[connection signal="dialogue_end" from="DinoNPC" to="Jerry" method="_on_NPC_dialogue_end"]
 [connection signal="dialogue_start" from="DinoNPC" to="Jerry" method="_on_NPC_dialogue_start"]
+[connection signal="body_entered" from="Portal2/Area2D" to="Portal2" method="_on_Area2D_body_entered"]
 [connection signal="health_gained" from="Health_potion" to="hearts" method="_on_Health_potion_health_gained"]
 [connection signal="health_gained" from="Health_potion3" to="hearts" method="_on_Health_potion_health_gained"]
 [connection signal="timeout" from="hearts/Timer" to="hearts" method="_on_Timer_timeout"]

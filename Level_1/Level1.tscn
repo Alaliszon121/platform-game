@@ -26,7 +26,7 @@
 [ext_resource path="res://ASSETS/WorldTiles/level1/tileYellow_05.png" type="Texture" id=24]
 [ext_resource path="res://ASSETS/WorldTiles/level1/tileYellow_08.png" type="Texture" id=25]
 [ext_resource path="res://ASSETS/npcs/sign/arrow1.png" type="Texture" id=26]
-[ext_resource path="res://NPCs/portal/Portal.gd" type="Script" id=27]
+[ext_resource path="res://Level_1/Portal.gd" type="Script" id=27]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tileYellow_04.png 0"
@@ -457,6 +457,7 @@ shape = SubResource( 2 )
 position = Vector2( 1123, 28 )
 rotation = -1.5708
 scale = Vector2( 3.29284, 3.29284 )
+frame = 4
 
 [node name="Sign1" parent="." instance=ExtResource( 18 )]
 position = Vector2( 563, 449 )
@@ -496,7 +497,7 @@ __meta__ = {
 [node name="Portal2" parent="." instance=ExtResource( 17 )]
 position = Vector2( 14078, -320 )
 scale = Vector2( 3.58849, 3.98594 )
-frame = 0
+frame = 3
 script = ExtResource( 27 )
 __meta__ = {
 "_edit_group_": true

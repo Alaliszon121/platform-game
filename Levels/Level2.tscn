@@ -101,7 +101,7 @@ margin_bottom = 112.0
 rect_pivot_offset = Vector2( 95, 58 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 5 )
-text = "Level 1.1 (Ancient Egypt)"
+text = "Level 2.1 (Ancient Egypt)"
 underline = 2
 
 [node name="level_2" type="LinkButton" parent="Panel_levels"]
@@ -113,7 +113,7 @@ rect_pivot_offset = Vector2( 95, 58 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 5 )
 disabled = true
-text = "Level 1.2 (Ancient Greece)"
+text = "Level 2.2 (Ancient Greece)"
 underline = 2
 
 [node name="level_3" type="LinkButton" parent="Panel_levels"]

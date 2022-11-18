@@ -140,7 +140,7 @@ tile_set = SubResource( 3 )
 collision_layer = 64
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( -851875, 0, 0, -851818, 1, 0, -786339, 1, 0, -786282, 1, 0, -720803, 1, 0, -720746, 1, 0, -655267, 1, 0, -655210, 1, 0, -589731, 1, 0, -589674, 1, 0, -524195, 1, 0, -524138, 1, 0, -458676, 0, 0, -458659, 1, 0, -458602, 1, 0, -393140, 1, 0, -393123, 1, 0, -393091, 0, 0, -393066, 1, 0, -393056, 0, 0, -327645, 0, 0, -327604, 1, 0, -327587, 1, 0, -327555, 1, 0, -327530, 1, 0, -327520, 1, 0, -262109, 1, 0, -262068, 1, 0, -262019, 1, 0, -261994, 1, 0, -261984, 1, 0, -196573, 1, 0, -196483, 1, 0, -196458, 1, 0, -196448, 1, 0, -131037, 1, 0, -131023, 0, 0, -130947, 1, 0, -130922, 1, 0, -130912, 1, 0, -65501, 1, 0, -65487, 1, 0, -65411, 1, 0, -65386, 1, 0, -65376, 1, 0, 35, 1, 0, 49, 1, 0, 125, 1, 0, 150, 1, 0, 160, 1, 0, 65571, 1, 0, 65585, 1, 0, 65589, 0, 0, 65696, 1, 0, 131107, 1, 0, 131121, 1, 0, 131125, 1, 0, 131232, 1, 0, 196643, 1, 0, 196657, 1, 0, 196661, 1, 0, 196768, 1, 0, 262179, 1, 0, 262193, 1, 0, 262197, 1, 0, 262304, 1, 0, 327715, 1, 0, 327729, 1, 0, 327733, 1, 0, 327840, 1, 0, 393251, 1, 0, 393265, 1, 0, 393269, 1, 0, 393376, 1, 0, 458787, 1, 0, 458801, 1, 0, 458805, 1, 0, 458912, 1, 0, 524448, 1, 0, 589984, 1, 0, 655520, 1, 0 )
+tile_data = PoolIntArray( -851875, 0, 0, -851818, 1, 0, -786339, 1, 0, -786282, 1, 0, -720803, 1, 0, -720746, 1, 0, -655267, 1, 0, -655210, 1, 0, -589731, 1, 0, -589674, 1, 0, -524195, 1, 0, -524138, 1, 0, -458676, 0, 0, -458659, 1, 0, -458602, 1, 0, -393140, 1, 0, -393123, 1, 0, -393091, 0, 0, -393066, 1, 0, -393056, 0, 0, -327645, 0, 0, -327604, 1, 0, -327587, 1, 0, -327555, 1, 0, -327530, 1, 0, -327520, 1, 0, -262109, 1, 0, -262068, 1, 0, -262019, 1, 0, -261984, 1, 0, -196573, 1, 0, -196483, 1, 0, -196448, 1, 0, -131037, 1, 0, -131023, 0, 0, -130947, 1, 0, -130912, 1, 0, -65501, 1, 0, -65487, 1, 0, -65411, 1, 0, -65376, 1, 0, 35, 1, 0, 49, 1, 0, 125, 1, 0, 160, 1, 0, 65571, 1, 0, 65585, 1, 0, 65589, 0, 0, 65696, 1, 0, 131107, 1, 0, 131121, 1, 0, 131125, 1, 0, 131232, 1, 0, 196643, 1, 0, 196657, 1, 0, 196661, 1, 0, 196768, 1, 0, 262179, 1, 0, 262193, 1, 0, 262197, 1, 0, 262304, 1, 0, 327715, 1, 0, 327729, 1, 0, 327733, 1, 0, 327840, 1, 0, 393251, 1, 0, 393265, 1, 0, 393269, 1, 0, 393376, 1, 0, 458787, 1, 0, 458801, 1, 0, 458805, 1, 0, 458912, 1, 0, 524448, 1, 0, 589984, 1, 0, 655520, 1, 0 )
 
 [node name="Trapdoors" type="Node2D" parent="."]
 
@@ -157,7 +157,7 @@ position = Vector2( 4896, -440 )
 position = Vector2( 832, 40 )
 rotation = -1.5708
 scale = Vector2( 2.45177, 2.45177 )
-frame = 4
+frame = 0
 
 [node name="Jerry" parent="." instance=ExtResource( 6 )]
 position = Vector2( 832, 72 )
@@ -350,9 +350,6 @@ position = Vector2( 9024, -944 )
 [node name="Spike46" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 7936, -944 )
 
-[node name="Spike43" parent="Spikes" instance=ExtResource( 7 )]
-position = Vector2( 9184, -816 )
-
 [node name="Spike44" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 9824, -880 )
 
@@ -501,7 +498,6 @@ position = Vector2( 904, 472 )
 
 [node name="fire" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( -4736, 208 )
-frame = 1
 __meta__ = {
 "_edit_group_": true
 }
@@ -521,7 +517,7 @@ collision_layer = 2
 [node name="Portal" parent="NPCs" instance=ExtResource( 18 )]
 position = Vector2( 11968, -504 )
 scale = Vector2( 3.58849, 3.98594 )
-frame = 6
+frame = 2
 script = ExtResource( 27 )
 
 [node name="Area2D" type="Area2D" parent="NPCs/Portal"]
@@ -705,6 +701,7 @@ one_shot = true
 [connection signal="start_fire_timer" from="NPCs/caveman" to="HUDTimer" method="_start_fire_timer"]
 [connection signal="stop_fire_timer" from="NPCs/caveman" to="HUDTimer" method="_stop_fire_timer"]
 [connection signal="body_entered" from="NPCs/Portal/Area2D" to="NPCs/Portal" method="_on_Area2D_body_entered"]
+[connection signal="lost_fire" from="hearts" to="NPCs/caveman" method="_lost_fire"]
 [connection signal="timeout" from="hearts/Timer" to="hearts" method="_on_Timer_timeout"]
 [connection signal="has_fire" from="HUDTimer" to="NPCs/caveman" method="_has_fire"]
 [connection signal="lost_fire" from="HUDTimer" to="NPCs/caveman" method="_lost_fire"]

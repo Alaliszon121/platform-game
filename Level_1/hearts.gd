@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var hearts = 3
+signal lost_fire
 
 func _on_Jerry_damaged():
 	if hearts > 1:
@@ -11,6 +12,7 @@ func _on_Jerry_damaged():
 			$heart2.visible = false
 	elif hearts == 1:
 		$heart.visible = false
+		emit_signal("lost_fire")
 		get_tree().reload_current_scene()
 
 func _on_Health_potion_health_gained():

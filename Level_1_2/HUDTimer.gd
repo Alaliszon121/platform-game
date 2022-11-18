@@ -23,10 +23,10 @@ func _on_Fire_fire_collected():
 	emit_signal("has_fire")
 
 func _on_Timer_timeout():
+	emit_signal("lost_fire")
 	print("koniec odliczania")
 	state = States.IDLE
 	visible = false
-	emit_signal("lost_fire")
 
 func _stop_fire_timer():
 	$Timer.set_paused(true)

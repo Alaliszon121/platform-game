@@ -12,6 +12,7 @@ func _on_Jerry_damaged():
 			$heart2.visible = false
 	elif hearts == 1:
 		$heart.visible = false
+		Dialogic.set_variable('is_cavewoman_rescued', "false")
 		emit_signal("lost_fire")
 		get_tree().reload_current_scene()
 

@@ -19,11 +19,14 @@ I never thought I would make my game available here, and yet I did. I'm making i
 - Enemies that can injure and be injured by the player
 - Level restart after losing lives or falling off the map
 - Dialogues with NPCs introducing story elements
-- Coyote Timer, or jumping in the air after falling off platforms
+- Coyote Timer - jumping in the air after falling off platforms
 - Walljump
 - Hidden difficult sublevels
 - Start and end screens
 - Statistics at the end of the level
+- Mechanics of ladders and trapdoors
+- Interesting missions from NPCs
+- Enemies detecting the player's location on level 1
 
 Full gameplay played by me:
 - Version 0.1.2: [https://youtu.be/YvjpzZpkyGQ](https://youtu.be/YvjpzZpkyGQ)

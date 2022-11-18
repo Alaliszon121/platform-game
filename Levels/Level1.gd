@@ -2,7 +2,7 @@ extends Control
 
 var unlocked_levels = 0
 var unlocked_sublevels = 0
-var coins = [0, 0, 0]
+var coins = [0, 0]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_game()

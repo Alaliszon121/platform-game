@@ -157,7 +157,6 @@ position = Vector2( 4896, -440 )
 position = Vector2( 832, 40 )
 rotation = -1.5708
 scale = Vector2( 2.45177, 2.45177 )
-frame = 7
 
 [node name="Jerry" parent="." instance=ExtResource( 6 )]
 position = Vector2( 832, 72 )
@@ -501,7 +500,7 @@ position = Vector2( 904, 472 )
 
 [node name="fire" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( -4736, 208 )
-frame = 1
+frame = 0
 __meta__ = {
 "_edit_group_": true
 }
@@ -521,6 +520,7 @@ collision_layer = 2
 [node name="Portal" parent="NPCs" instance=ExtResource( 18 )]
 position = Vector2( 11968, -504 )
 scale = Vector2( 3.58849, 3.98594 )
+frame = 3
 script = ExtResource( 27 )
 
 [node name="Area2D" type="Area2D" parent="NPCs/Portal"]

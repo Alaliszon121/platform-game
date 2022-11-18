@@ -40,7 +40,7 @@ func save_data():
 	if !can_coins_progress_be_saved:
 		coins[1] = str2var(save_data.coins_level_1_2)
 	
-	coins[0] = str2var(save_data.coins_level_1_2)
+	coins[0] = str2var(save_data.coins_level_1)
 	
 	coins[2] = str2var(save_data.coins_level_2_1)
 	coins[3] = str2var(save_data.coins_level_2_2)

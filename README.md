@@ -26,5 +26,5 @@ I never thought I would make my game available here, and yet I did. I'm making i
 - Statistics at the end of the level
 
 Full gameplay played by me:
-Version 0.1.2: [https://youtu.be/YvjpzZpkyGQ](https://youtu.be/YvjpzZpkyGQ)
-Version 0.0.13: [https://youtu.be/eBYl40oXy30](https://youtu.be/eBYl40oXy30)
+- Version 0.1.2: [https://youtu.be/YvjpzZpkyGQ](https://youtu.be/YvjpzZpkyGQ)
+- Version 0.0.13: [https://youtu.be/eBYl40oXy30](https://youtu.be/eBYl40oXy30)

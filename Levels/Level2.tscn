@@ -171,4 +171,5 @@ texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 1 )
 expand = true
 
+[connection signal="pressed" from="Panel_levels/level_1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

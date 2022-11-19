@@ -20,7 +20,7 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
-	print(slow)
+	print(position.x)
 	match state:
 		States.AIR:
 			if is_on_floor():
@@ -29,6 +29,7 @@ func _physics_process(_delta):
 			elif can_walljump():
 				if Input.is_action_pressed("ui_up") and ((Input.is_action_pressed("ui_left") and direction == 1) or (Input.is_action_pressed("ui_right") and direction == -1)):
 					last_walljump_direction = direction
+					velocity.y = JUMPFORCE
 			elif can_climb():
 				state = States.LADDER
 				continue

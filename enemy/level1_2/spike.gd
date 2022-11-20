@@ -12,7 +12,7 @@ func _ready():
 		$Sprite.flip_v = true
 		$CollisionPolygon2D.rotation_degrees = $CollisionPolygon2D.rotation_degrees + 180
 		$CollisionPolygon2D.position.y = $CollisionPolygon2D.position.y + 48
-		$damage_checker.position.y = $damage_checker.position.y - 56
+		$damage_checker/CollisionPolygon2D2.rotation_degrees = $damage_checker/CollisionPolygon2D2.rotation_degrees + 180
 		$player_checker.queue_free()
 
 func _physics_process(_delta):
@@ -21,7 +21,7 @@ func _physics_process(_delta):
 			continue
 		States.FALL:
 			velocity.y = velocity.y + GRAVITY
-			velocity = move_and_slide(velocity, Vector2.UP)
+			velocity = move_and_slide_with_snap(velocity, Vector2.UP)
 
 func _on_player_checker_body_entered(body):
 	$player_checker.set_collision_mask_bit(0, false)

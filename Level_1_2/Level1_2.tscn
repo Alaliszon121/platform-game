@@ -157,7 +157,7 @@ position = Vector2( 4896, -440 )
 position = Vector2( 832, 40 )
 rotation = -1.5708
 scale = Vector2( 2.45177, 2.45177 )
-frame = 7
+frame = 3
 
 [node name="Jerry" parent="." instance=ExtResource( 6 )]
 position = Vector2( 832, 72 )
@@ -491,7 +491,7 @@ position = Vector2( 904, 472 )
 
 [node name="fire" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( -4736, 208 )
-frame = 1
+frame = 0
 __meta__ = {
 "_edit_group_": true
 }
@@ -511,6 +511,7 @@ collision_layer = 2
 [node name="Portal" parent="NPCs" instance=ExtResource( 18 )]
 position = Vector2( 11968, -504 )
 scale = Vector2( 3.58849, 3.98594 )
+frame = 5
 script = ExtResource( 27 )
 
 [node name="Area2D" type="Area2D" parent="NPCs/Portal"]
@@ -572,10 +573,10 @@ anchor_left = 0.105
 anchor_top = 0.102
 anchor_right = 0.105
 anchor_bottom = 0.102
-margin_left = 126.75
-margin_top = -0.444
-margin_right = 212.75
-margin_bottom = 132.556
+margin_left = 133.75
+margin_top = 2.556
+margin_right = 219.75
+margin_bottom = 135.556
 custom_colors/font_color = Color( 0.72549, 0.811765, 1, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "X"
@@ -587,9 +588,9 @@ anchor_top = 0.102
 anchor_right = 0.105
 anchor_bottom = 0.102
 margin_left = 93.75
-margin_top = 22.556
-margin_right = 124.75
-margin_bottom = 99.556
+margin_top = 26.556
+margin_right = 114.75
+margin_bottom = 84.556
 custom_colors/font_color = Color( 0.72549, 0.811765, 1, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "X"

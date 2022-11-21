@@ -1,7 +1,7 @@
 {
 	"color": "#ffeaae6e",
 	"description": "",
-	"display_name": " ",
+	"display_name": "Tabliczka ",
 	"display_name_bool": false,
 	"id": "character-1667400918.json",
 	"mirror_portraits": false,
@@ -18,6 +18,10 @@
 		{
 			"name": "sign2",
 			"path": "res://ASSETS/npcs/sign/sign2.png"
+		},
+		{
+			"name": "sign3",
+			"path": "res://ASSETS/npcs/sign/sign3.png"
 		}
 	],
 	"scale": 500,

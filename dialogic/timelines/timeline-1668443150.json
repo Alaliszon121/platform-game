@@ -44,13 +44,13 @@
 			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "(Don't change)",
-			"text": "W Erze Jaskoniowcow pojawiaja sie stalaktyty i stalagmity. Uwazaj na glowe i pod nogi!"
+			"text": "Stalactites and stalagmites appear in the Cave Era. Watch your head and under your feet!"
 		},
 		{
 			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Wrogowie sa szybsi i moga cie wkryc, nawet jesli jestes za nimi. Uwazaj!"
+			"text": "Enemies are quicker and can detect you, even if you are behind them. Be careful!"
 		}
 	],
 	"metadata": {

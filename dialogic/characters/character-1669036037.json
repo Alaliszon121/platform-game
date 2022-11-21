@@ -1,0 +1,21 @@
+{
+	"color": "#ff2f87a9",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1669036037.json",
+	"mirror_portraits": true,
+	"name": "Pharaoh",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -180,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ASSETS/npcs/pharaoh/pharaohsad_portrait.png"
+		}
+	],
+	"scale": 500,
+	"theme": ""
+}

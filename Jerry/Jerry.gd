@@ -15,7 +15,7 @@ var on_ladder := false
 
 const SPEED = 400
 const GRAVITY = 50
-const JUMPFORCE = -1300
+const JUMPFORCE = -1400
 
 signal damaged
 
@@ -110,8 +110,7 @@ func _physics_process(_delta):
 			elif Input.is_action_pressed("ui_left"):
 				velocity.x = -SPEED * 0.5
 			velocity = move_and_slide(velocity, Vector2.UP)
-	
-		
+
 func can_climb():
 	if on_ladder and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down")):
 		return true
@@ -176,9 +175,12 @@ func _on_LadderChecker_body_entered(body):
 
 func _on_LadderChecker_body_exited(body):
 	on_ladder = false
-	
+
 func _on_sand_checker_body_entered(body):
 	slow = 0.3
 
 func _on_sand_checker_body_exited(body):
 	slow = 1
+
+func snake_jump():
+	velocity.y = JUMPFORCE * 1.2

@@ -50,73 +50,73 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Aaa!!! Chcesz mnie przestraszyc na smierc!?"
+			"text": "Aaa!!! You want to scare me to death!?"
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nie no, po co mialbym to robic? \nWidzialem, ze umiesz mowic jako jedyny w tym miejscu."
+			"text": "No, why would I do that? \nI saw that you know how to speak as the only one in this place."
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "No i zagadac do ciebie chcialem."
+			"text": "And so I wanted to talk to you."
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nie wiedzialem, ze od razu az tak sie przestraszysz."
+			"text": "I didn't know you would be so scared."
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ale jestes dinozaurem! Jakim cudem mowisz!?"
+			"text": "But you are a dinosaur! How do you speak?"
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "A no widzisz, kiedys nie bylem dinozaurem tylko CZŁOWIEKIEM! Po prostu utknalem w tej krainie i z czasem zaczalem sie zmieniac w dinozaura."
+			"text": "And well you see, once upon a time I was not a dinosaur but a HUMAN! I just got stuck in this land and over time I started turning into a dinosaur."
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": " I dzieki Bogu, bo przynajmniej nie jestem juz potencjalnym obiadem kazdej istoty ktora tutaj zyje."
+			"text": "And thank God, because at least I am no longer the potential dinner of every being who lives here."
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Tylko polowy z nich..."
+			"text": "Only half of them..."
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Czyli mowisz, ze jesli sie stad szybko nie wydostane to zmienie sie w dinozaura na zawsze?"
+			"text": "So you're saying that if I don't get out of here soon I'll turn into a dinosaur forever?"
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Dokladnie tak! Ale czad, co nie?"
+			"text": "That's right! So cool, huh?"
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nie! Ja chce wrocic do domu."
+			"text": "No, I just want to go home."
 		},
 		{
 			"character": "character-1667384970.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nie polecam Ci dalej podrozowac... Ale jak musisz to probuj. Za moimi plecami znajduje sie portal. Powodzenia!"
+			"text": "I do not recommend you to travel further.... But if you must then try. There is a portal behind my back. Good luck!"
 		},
 		{
 			"animation": "[Default]",
@@ -142,7 +142,7 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ehh... Czeka mnie dluga podroz..."
+			"text": "Ehh... I have a long journey ahead of me..."
 		},
 		{
 			"animation": "[Default]",

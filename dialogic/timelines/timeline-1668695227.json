@@ -50,7 +50,7 @@
 			"character": "character-1668695241.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Dziekuje za zabicie tych groznych Tomow! Balam sie ze juz po mnie!"
+			"text": "Thank you for killing those dangerous Toms! I was afraid I was already dead!"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -65,19 +65,19 @@
 			"character": "character-1668695241.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Blagam pomoz mi! Ocal mnie od tych Tomow!"
+			"text": "I beg you to help me! Save me from these Toms!"
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Tomow? ja tu widze tylko tygrysy..."
+			"text": "Tomow? All I see here are tigers...."
 		},
 		{
 			"character": "character-1668695241.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "O czym ty gadasz? Nad ta skrytka czaja sie dwa wielkie, fioletowe Tomy! Ocal mnie, prosze..."
+			"text": "What are you talking about? Above this hiding place two big purple Toms are hunting me! Save me, please..."
 		},
 		{
 			"event_id": "dialogic_013"

@@ -1,0 +1,21 @@
+{
+	"color": "#ffd6d6d6",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1669036058.json",
+	"mirror_portraits": false,
+	"name": "Mummy",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -40,
+	"offset_y": -180,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ASSETS/npcs/mummy/mummy7.png"
+		}
+	],
+	"scale": 600,
+	"theme": ""
+}

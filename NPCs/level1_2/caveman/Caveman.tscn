@@ -30,7 +30,6 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 4.1978, 4.8 )
 frames = SubResource( 2 )
-frame = 1
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -44,6 +43,6 @@ shape = SubResource( 3 )
 [node name="mark" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -104 )
 scale = Vector2( 3.50781, 3.84115 )
-frame = 0
+frame = 3
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

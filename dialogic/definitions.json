@@ -26,6 +26,18 @@
 			"name": "is_player_has_fire",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1669038028-212",
+			"name": "first_time_talked_to_mummy",
+			"type": 0,
+			"value": "true"
+		},
+		{
+			"id": "1669036279-943",
+			"name": "is_sarcophagus_repaired",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }

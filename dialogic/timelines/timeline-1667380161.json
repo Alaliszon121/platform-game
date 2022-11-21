@@ -24,7 +24,7 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Gdzie ja jestem...? Ale tu zielono!"
+			"text": "Where am I...? How green it is here!"
 		},
 		{
 			"animation": "[Default]",
@@ -50,31 +50,31 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "O! Ksiazka!"
+			"text": "Oh, the Book!"
 		},
 		{
 			"character": "character-1667380116.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "\"Rozdzial 1 Era Dinozaurow\nCzekaja cie tu podrozniku rozne zagrozenia. Uwazaj na dinozaury...\""
+			"text": "\"Chapter 1 The Age of Dinosaurs.\nVarious dangers await you here, traveler. Beware of dinosaurs...\""
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "JESTEM W ERZE DINOZAUROW!?"
+			"text": "I'M IN THE DINOSAUR AGE!?"
 		},
 		{
 			"character": "character-1667380116.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "\"..., co prawda niektore mogą byc przyjazne, ale wiekszosc tylko marzy, zeby odgryzc Ci glowe.\""
+			"text": "\"..., although some may be friendly, but most just dream of biting your head off.\""
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Oh, uroczo."
+			"text": "Oh, lovely."
 		},
 		{
 			"event_id": "dialogic_022",

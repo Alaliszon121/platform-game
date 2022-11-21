@@ -1,0 +1,260 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"condition": "",
+			"definition": "1669038028-212",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"definition": "1669038028-212",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "false"
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Go away from here if you like your life. Now."
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You have no right to be in this sacred place"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I came here to save the kingdom. In your anger you destroy all their goods."
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "BECAUSE SOMETHING HAS DESTROYED MINE!"
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I was resting peacefully in my most beautiful sarcophagus made of pure gold when it happened."
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Something blue and chaotic suddenly appeared in my tomb, destroyed my sarcophagus and scattered the remains over my tomb."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Something blue and chaotic?"
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, this is what I just said. You are starting to annoy me."
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It is dangerous to annoy me."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I have a question for you.\nIf you have such power, why didn't you pick up the pieces of the sarcophagus and repair it yourself?"
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "DO YOU WANT TO BE MURDERED? You are literally asking for it."
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I could fix it myself, it is true. But  I am a sacred emperor, I will not wander through the corridors of the tomb and collect parts of the sarcophagus, like some cleaning lady."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What if I do it for you? Would you then forgive the destruction of the property of the people of Egypt? And would you then show me this Port.... blue, chaotic thing?"
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If you accomplish that, then yes.\nI will finish spreading destruction and let you into my chamber and show you this blue chaos."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1669036279-943",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Go find parts of my sarcophagus, do not waste my precious time."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*whispering to yourself* It's not like you're already dead and have all eternity..."
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Did you say something?"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, nothing"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1669036279-943",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I see that you have completed your mission. Well then, you have my permission to enter the chamber."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The corridors here are very twisty. Will you lead me there?"
+		},
+		{
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Of course not. I only promised you that I would let you go in there, not that I would give you a tour around the tomb."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ehh... Anyway, thank you for everything."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669036058.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1669036261.json",
+		"name": "Mummy"
+	}
+}

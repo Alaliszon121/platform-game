@@ -1,0 +1,163 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hold on for a moment, young man"
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What's going on?"
+		},
+		{
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My holy father's eternal rest has been disturbed by something."
+		},
+		{
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He came back from the land of the dead and is taking revenge on me and my kingdom for not making sure he could rest in peace."
+		},
+		{
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Now he is destroying buildings in anger. It causes sandstorms and huge winds."
+		},
+		{
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "I, Pharaoh, ruler of ancient Egypt, command you to put an end to these problems."
+		},
+		{
+			"choice": "I will do it",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So go, complete the mission. If you succeed, a great reward awaits you."
+		},
+		{
+			"choice": "I don't have time for that.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It was not a request, but an order. If you do not undertake the mission you will suffer a cruel death."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I advise you not to disappoint me."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1669036037.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1669036267.json",
+		"name": "Pharaoh"
+	}
+}

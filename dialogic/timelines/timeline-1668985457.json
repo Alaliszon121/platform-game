@@ -1,0 +1,103 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "sign3",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In Ancient Egypt building works are in progress . Watch out for left over vehicles, they may run over you!"
+		},
+		{
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In addition, there are moving sands. Everything in them moves much slower and cannot jump."
+		},
+		{
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There are also cats. They look cute and friendly, but are just as dangerous as tigers and even faster."
+		},
+		{
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "For that, don't be afraid of weevils. They are not venomous. But they can hit you high in the air."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, this is going to be interesting...."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1668985457.json",
+		"name": "Sign3"
+	}
+}

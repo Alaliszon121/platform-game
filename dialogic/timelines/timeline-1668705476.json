@@ -50,25 +50,25 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hej! Wiesz moze gdzie znajde portal?"
+			"text": "Hey, do you know where I can find a portal?"
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "A wiem. Ale nie powiem."
+			"text": "I know. But I won't say."
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "A moglbym cie jakos przekonac zebys mi powiedzial?"
+			"text": "Can I somehow convince you to tell me?"
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ano tak. Musisz tylko przyniesc mi ogien. Zimno mi."
+			"text": "Well, yes. You just need to bring me a fire. I'm getting cold."
 		},
 		{
 			"event_id": "dialogic_013"
@@ -83,25 +83,25 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Mam ogien! Prosze, oto on."
+			"text": "I have a fire! Please, here it is."
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Dziekuje"
+			"text": "Thank you"
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Too powiesz mi teraz?"
+			"text": "Will you tell me now?"
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "A uratowales moja zone? "
+			"text": "Did you save my wife?"
 		},
 		{
 			"condition": "",
@@ -113,13 +113,13 @@
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "To wroc sie i ja uratuj. Zostawilem ja wczoraj zeby zjadl ja Tom, bo mnie wkurzala."
+			"text": "Then go back and save her. I left her yesterday to be eaten by Tom because she was annoying me."
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ale jednak chcialbym ja z powrotem. Nikt tak dobrze nie przygotowuje pieczonych Tomow jak ona..."
+			"text": "But now, I would like her back. No one prepares roast Toms as well as she does...."
 		},
 		{
 			"event_id": "dialogic_013"
@@ -134,25 +134,25 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Tak"
+			"text": "Yes"
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "To dobrze. Powiem Ci."
+			"text": "Okay, that's fine. I'll tell you."
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Przejscie jest za moimi plecami. Powodzenia w podrozy."
+			"text": "The portal is behind my back. Good luck on your journey."
 		},
 		{
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Dziekuje"
+			"text": "Thans"
 		},
 		{
 			"definition": "1668708262-246",
@@ -178,13 +178,13 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Nie mam ognia..."
+			"text": "I don't have a fire..."
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "To musisz mi go przyniesc. Wtedy Ci powiem."
+			"text": "Then you have to bring it to me. Then I will tell you."
 		},
 		{
 			"condition": "",
@@ -196,13 +196,13 @@
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "A! Prawie zapomnialem. Po drodze uratuj moja zone. Zostawilem ja zeby zjadl ja Tom, bo mnie wkurzala."
+			"text": "A! I almost forgot. Save my wife on the way. I left her to be eaten by Tom because she was annoying me."
 		},
 		{
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ale jednak chcialbym ja z powrotem. Nikt tak dobrze nie przygotowuje pieczonych Tomow jak ona..."
+			"text": "But now, I would like her back. No one prepares roast Toms as well as she does...."
 		},
 		{
 			"event_id": "dialogic_013"
@@ -211,7 +211,7 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Okej, w porzadku..."
+			"text": "Okay, fine..."
 		},
 		{
 			"event_id": "dialogic_013"

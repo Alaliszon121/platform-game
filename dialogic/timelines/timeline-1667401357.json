@@ -44,37 +44,37 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ooo, tabliczka!"
+			"text": "Ooo, the tablet!"
 		},
 		{
 			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Skok: W\nRuch prawo/lewo: A/D"
+			"text": "Jump: W\nRight/left movement: A/D"
 		},
 		{
 			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Zeby zabic wroga nalezy mu skoczyc na glowe"
+			"text": "To kill an enemy you have to jump on his head"
 		},
 		{
 			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Warto zbierac znajdzki!"
+			"text": "It's worth finding collectibles!"
 		},
 		{
 			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Czerwone eliksiry przywracaja zycie do maksymalnie 3 serc."
+			"text": "Red potions restore life to up to 3 hearts."
 		},
 		{
 			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Da sie odbijac od od sciany (walljump)\nNajlatwiej go wykonywac caly czas trymajac klawisz skoku i zmieniac odpowiedznio klawisze ruchu prawo-lewo"
+			"text": "You can bounce off the wall (walljump)\nThe easiest way to do it is to hold the jump key the whole time and change right-left movement keys as needed"
 		}
 	],
 	"metadata": {

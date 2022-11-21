@@ -490,7 +490,6 @@ position = Vector2( 904, 472 )
 
 [node name="fire" parent="NPCs" instance=ExtResource( 21 )]
 position = Vector2( -4736, 208 )
-frame = 1
 __meta__ = {
 "_edit_group_": true
 }

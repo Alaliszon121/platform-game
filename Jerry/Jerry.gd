@@ -15,7 +15,7 @@ var on_ladder := false
 
 const SPEED = 400
 const GRAVITY = 50
-const JUMPFORCE = -1400
+const JUMPFORCE = -1300
 
 signal damaged
 

@@ -1,6 +1,113 @@
 {
 	"events": [
-
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ancient Egypt was rich in culture, including government, religion, art and writing."
+		},
+		{
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Government and religion were linked. The leader of the government, Pharaoh, was also the leader of religion. "
+		},
+		{
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "After death, Pharaohs were laid to rest in tombs-pyramids."
+		},
+		{
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And this is probably just the tip of the iceberg of their bizarre culture...."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667380216.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.5",

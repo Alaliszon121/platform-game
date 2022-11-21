@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://ASSETS/fonts/Alkalami-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Level_2_1/ParallaxBackground.tscn" type="PackedScene" id=2]
@@ -46,6 +46,7 @@
 [ext_resource path="res://ASSETS/npcs/mummy/mummy2.png" type="Texture" id=44]
 [ext_resource path="res://ASSETS/npcs/mummy/mummy1.png" type="Texture" id=45]
 [ext_resource path="res://Level_2_1/Sarcophagus.gd" type="Script" id=46]
+[ext_resource path="res://NPCs/level1/book/Book.tscn" type="PackedScene" id=47]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
@@ -333,7 +334,7 @@ shape = SubResource( 19 )
 position = Vector2( 768, 64 )
 rotation = -1.5708
 scale = Vector2( 3.39318, 3.84517 )
-frame = 0
+frame = 4
 
 [node name="Sarcophagus" type="Area2D" parent="StaticNodes"]
 position = Vector2( 8768, -192 )
@@ -611,7 +612,7 @@ position = Vector2( 5336, 32 )
 position = Vector2( 5416, -608 )
 
 [node name="Jerry" parent="." instance=ExtResource( 14 )]
-position = Vector2( 7843, 594 )
+position = Vector2( 762, 99 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -656,7 +657,7 @@ tile_data = PoolIntArray( 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0
 position = Vector2( 10544, -464 )
 rotation = -3.14159
 scale = Vector2( 5.41131, 4.62957 )
-frame = 0
+frame = 4
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_group_": true
@@ -690,6 +691,7 @@ shape = SubResource( 22 )
 position = Vector2( 0, 3.05176e-05 )
 scale = Vector2( 2.05, 2.185 )
 frames = SubResource( 23 )
+frame = 3
 playing = true
 flip_h = true
 
@@ -719,7 +721,7 @@ shape = SubResource( 22 )
 position = Vector2( -274, 22 )
 scale = Vector2( 2.7623, 2.78034 )
 frames = SubResource( 25 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="mark" parent="NPCs/Mummy" instance=ExtResource( 37 )]
@@ -738,6 +740,9 @@ shape = SubResource( 27 )
 [node name="Timer" type="Timer" parent="NPCs/Mummy"]
 wait_time = 2.0
 one_shot = true
+
+[node name="Book3" parent="NPCs" instance=ExtResource( 47 )]
+position = Vector2( 864, 608 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
@@ -908,5 +913,7 @@ text = "X"
 [connection signal="show_pieces_counter" from="NPCs/Mummy" to="HUDCounter" method="_on_Mummy_show_pieces_counter"]
 [connection signal="body_entered" from="NPCs/Mummy/Area2D" to="NPCs/Mummy" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="NPCs/Mummy/Timer" to="NPCs/Mummy" method="_on_Timer_timeout"]
+[connection signal="dialogue_end" from="NPCs/Book3" to="Jerry" method="_on_NPC_dialogue_end"]
+[connection signal="dialogue_start" from="NPCs/Book3" to="Jerry" method="_on_NPC_dialogue_start"]
 [connection signal="timeout" from="hearts/Timer" to="hearts" method="_on_Timer_timeout"]
 [connection signal="pieces_collected" from="HUDCounter" to="NPCs/Mummy" method="_on_HUDCounter_pieces_collected"]

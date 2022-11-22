@@ -74,6 +74,24 @@ custom_fonts/font = SubResource( 3 )
 text = "Play again"
 underline = 2
 
+[node name="continue" type="LinkButton" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -97.0
+margin_top = -93.5
+margin_right = 110.0
+margin_bottom = -7.5
+focus_mode = 2
+custom_colors/font_color_focus = Color( 0.372549, 0.219608, 0.054902, 1 )
+custom_colors/font_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+custom_colors/font_color_hover = Color( 0.564706, 0.333333, 0.0823529, 1 )
+custom_colors/font_color_pressed = Color( 0.164706, 0.0941176, 0.0196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Continue"
+underline = 2
+
 [node name="goToMenu" type="LinkButton" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -103,20 +121,6 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Enemies" type="Label" parent="Panel"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -203.0
-margin_top = -112.5
-margin_right = 201.0
-margin_bottom = -77.5
-custom_colors/font_color = Color( 0.372549, 0.219608, 0.054902, 1 )
-custom_fonts/font = SubResource( 4 )
-text = "000"
-align = 1
-valign = 1
-
 [connection signal="pressed" from="Panel/TryAgain" to="." method="_on_TryAgain_pressed"]
+[connection signal="pressed" from="Panel/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Panel/goToMenu" to="." method="_on_goToMenu_pressed"]

@@ -68,7 +68,7 @@
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Well, yes. You just need to bring me a fire. I'm getting cold."
+			"text": "Well, yes. You just need to [b]bring me a fire[/b]. I'm getting cold."
 		},
 		{
 			"event_id": "dialogic_013"
@@ -113,7 +113,7 @@
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Then go back and save her. I left her yesterday to be eaten by Tom because she was annoying me."
+			"text": "Then [b]go back and save her[/b]. I left her yesterday to be eaten by Tom because she was annoying me."
 		},
 		{
 			"character": "character-1668705411.json",
@@ -184,7 +184,7 @@
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Then you have to bring it to me. Then I will tell you."
+			"text": "Then [b]you have to bring it[/b] to me. Then I will tell you."
 		},
 		{
 			"condition": "",
@@ -196,7 +196,7 @@
 			"character": "character-1668705411.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "A! I almost forgot. Save my wife on the way. I left her to be eaten by Tom because she was annoying me."
+			"text": "A! I almost forgot. [b]Save my wife[/b] on the way. I left her to be eaten by Tom because she was annoying me."
 		},
 		{
 			"character": "character-1668705411.json",

@@ -62,7 +62,13 @@
 			"character": "character-1667400918.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "For that, don't be afraid of weevils. They are not venomous. But they can hit you high in the air."
+			"text": "Well, and they have 9 lives. Watch out on them!"
+		},
+		{
+			"character": "character-1667400918.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Although, you don't be afraid of snakes. They are not venomous. But they can hit you high in the air."
 		},
 		{
 			"animation": "[Default]",

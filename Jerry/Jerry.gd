@@ -170,17 +170,18 @@ func _on_NPC_dialogue_start():
 func _on_NPC_dialogue_end():
 	state = States.FLOOR
 
-func _on_LadderChecker_body_entered(body):
+func _on_LadderChecker_body_entered(_body):
 	on_ladder = true
 
-func _on_LadderChecker_body_exited(body):
+func _on_LadderChecker_body_exited(_body):
 	on_ladder = false
 
-func _on_sand_checker_body_entered(body):
+func _on_sand_checker_body_entered(_body):
 	slow = 0.3
 
-func _on_sand_checker_body_exited(body):
+func _on_sand_checker_body_exited(_body):
 	slow = 1
 
 func snake_jump():
+	jumps_left = 1
 	velocity.y = JUMPFORCE * 1.2

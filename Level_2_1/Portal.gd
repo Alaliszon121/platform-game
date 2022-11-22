@@ -8,7 +8,7 @@ var can_level_progress_be_saved := false
 var can_sublevel_progress_be_saved := false
 var can_coins_progress_be_saved := false
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	coins[2] = PlayerData.coins
 	can_be_saved()
 

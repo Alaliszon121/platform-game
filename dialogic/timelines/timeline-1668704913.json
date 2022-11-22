@@ -24,7 +24,7 @@
 			"character": "character-1667380216.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ooo fire! How cool! The only thing is it won't burn forever...."
+			"text": "Ooo fire! How cool! I'll take it, it will definitely be useful. The only thing is it won't burn forever...."
 		},
 		{
 			"animation": "[Default]",
@@ -50,7 +50,13 @@
 			"character": "character-1667380116.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "The fire will go out when the time next to the hourglass goes down to 0. Hurry up!"
+			"text": "The fire will go out when the time next to the hourglass goes down to 0."
+		},
+		{
+			"character": "character-1667380116.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If you lose it, you have to come for it again. Hurry up!"
 		},
 		{
 			"event_id": "dialogic_022",

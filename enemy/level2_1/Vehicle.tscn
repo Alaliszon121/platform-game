@@ -27,6 +27,7 @@ height = 103.461
 rotation = -0.436332
 collision_layer = 0
 collision_mask = 3
+collision/safe_margin = 0.001
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

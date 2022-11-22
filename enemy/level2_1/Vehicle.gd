@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var velocity = Vector2(0, 0)
-const GRAVITY = 12
+const GRAVITY = 10
 var slow = 1
 var slowed = 1
 enum States {SLEEP, FALL}
@@ -18,7 +18,7 @@ func _physics_process(_delta):
 			velocity.y = (velocity.y + GRAVITY) * slow
 			velocity = move_and_slide(velocity, Vector2.UP) * slow
 
-func _on_player_checker_body_entered(body):
+func _on_player_checker_body_entered(_body):
 	$player_checker.queue_free()
 	state = States.FALL
 
@@ -31,7 +31,7 @@ func _on_damage_checker_body_entered(body):
 func _on_Timer_timeout():
 	queue_free()
 
-func _on_sand_checker_body_entered(body):
+func _on_sand_checker_body_entered(_body):
 	slow = 0.8
 	$damage_checker.queue_free()
 	$slow_animation.start()

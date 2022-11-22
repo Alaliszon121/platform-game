@@ -151,7 +151,7 @@
 			"character": "character-1669036058.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Go find parts of my sarcophagus, do not waste my precious time."
+			"text": "Go find [b]six parts[/b] of my sarcophagus, do not waste my precious time."
 		},
 		{
 			"character": "character-1667380216.json",

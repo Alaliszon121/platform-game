@@ -6,7 +6,7 @@
 extents = Vector2( 32, 8 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 4 )
+extents = Vector2( 27.5, 4 )
 
 [node name="Trapdoor" type="StaticBody2D"]
 collision_layer = 2

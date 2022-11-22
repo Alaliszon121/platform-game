@@ -21,5 +21,8 @@ func _physics_process(_delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func _on_top_checker_body_entered(body):
+	jump_animation()
 	body.snake_jump()
 
+func jump_animation():
+	$AnimationPlayer.play("Bounce")

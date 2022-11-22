@@ -20,8 +20,11 @@ func _physics_process(_delta):
 		States.SLEEP:
 			continue
 		States.FALL:
-			velocity.y = velocity.y + GRAVITY
-			velocity = move_and_slide(velocity, Vector2.UP)
+			if(is_on_floor() and direction == 1):
+				continue
+			else:
+				velocity.y = velocity.y + GRAVITY
+				velocity = move_and_slide(velocity, Vector2.UP)
 
 func _on_player_checker_body_entered(body):
 	$player_checker.set_collision_mask_bit(0, false)

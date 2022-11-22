@@ -15,4 +15,4 @@ func _on_goToMenu_pressed():
 	get_tree().change_scene("res://Start_scene.tscn")
 
 func _on_continue_pressed():
-	get_tree().change_scene("res://Level_1_2/Level1_2.tscn")
+	get_tree().change_scene("res://Level_2_1/Level2_1.tscn")

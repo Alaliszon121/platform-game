@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum States {AIR, FLOOR, DIALOGUE, LADDER}
+enum States {AIR, FLOOR, DIALOGUE, LADDER, FLY}
 
 var state = States.AIR
 var velocity = Vector2(0, 0)
@@ -110,6 +110,27 @@ func _physics_process(_delta):
 			elif Input.is_action_pressed("ui_left"):
 				velocity.x = -SPEED * 0.5
 			velocity = move_and_slide(velocity, Vector2.UP)
+		
+		States.FLY:
+			$Sprite.play("jump")
+			if Input.is_action_pressed("ui_right"):
+				velocity.x = SPEED
+				$Sprite.flip_h = false
+				$Wings.flip_h = false
+				$Wings.position.x = -49
+			elif Input.is_action_pressed("ui_left"):
+				velocity.x = -SPEED
+				$Sprite.flip_h = true
+				$Wings.flip_h = true
+				$Wings.position.x = 55
+			else:
+				velocity.x = lerp(velocity.x, 0, 0.2)
+			if Input.is_action_just_pressed("ui_up"):
+				#set_animation_loop("fly", false)
+				$Wings.play("fly")
+				velocity.y = JUMPFORCE
+			set_direction()
+			move_and_fall()
 
 func can_climb():
 	if on_ladder and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down")):
@@ -185,3 +206,6 @@ func _on_sand_checker_body_exited(_body):
 func snake_jump():
 	jumps_left = 1
 	velocity.y = JUMPFORCE * 1.2
+
+func _on_wings_checker_body_entered(body):
+	state = States.FLY

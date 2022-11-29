@@ -26,7 +26,7 @@ func _physics_process(_delta):
 				velocity.y = velocity.y + GRAVITY
 				velocity = move_and_slide(velocity, Vector2.UP)
 
-func _on_player_checker_body_entered(body):
+func _on_player_checker_body_entered(_body):
 	$player_checker.set_collision_mask_bit(0, false)
 	state = States.FALL
 

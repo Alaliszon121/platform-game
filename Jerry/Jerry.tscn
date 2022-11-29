@@ -70,14 +70,14 @@ position = Vector2( -1, -26 )
 rotation = -0.000530539
 scale = Vector2( 5, 5 )
 frames = SubResource( 4 )
-animation = "idle"
-frame = 1
+animation = "jump"
 playing = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -0.5, 6.5 )
 shape = SubResource( 5 )
 __meta__ = {
@@ -92,6 +92,7 @@ cast_to = Vector2( -0.000108719, 30 )
 collision_mask = 2
 
 [node name="LadderChecker" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 64
 

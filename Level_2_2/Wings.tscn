@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ASSETS/player/wings/wing1.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/player/wings/wing3.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/player/wings/wing4.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/player/wings/wing2.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "fly",
+"speed": 4.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Wings" type="AnimatedSprite" parent="."]
+position = Vector2( -57, 8 )
+scale = Vector2( 2.58688, 2.58688 )
+frames = SubResource( 1 )
+animation = "fly"

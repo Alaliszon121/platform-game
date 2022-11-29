@@ -7,7 +7,7 @@ signal dialogue_end
 
 signal fire_collected
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	if not PlayerData.is_dialog_playing and can_be_played:
 		PlayerData.is_dialog_playing = true
 		var new_dialog = Dialogic.start(name)

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ASSETS/background/level2_2/sea.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/background/level2_2/cloud.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/background/level2_2/sky.png" type="Texture" id=3]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
@@ -9,6 +11,24 @@ motion_scale = Vector2( 0.3, 0.3 )
 motion_mirroring = Vector2( 3199, 2539 )
 
 [node name="Sprite" type="Sprite" parent="Sky"]
+position = Vector2( 6, -1928 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Clouds" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 3199, 2539 )
+
+[node name="Sprite" type="Sprite" parent="Clouds"]
+position = Vector2( 6, -1928 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sea" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.52, 0.52 )
+motion_mirroring = Vector2( 3199, 2539 )
+
+[node name="Sprite" type="Sprite" parent="Sea"]
 position = Vector2( 6, -1928 )
 texture = ExtResource( 1 )
 centered = false

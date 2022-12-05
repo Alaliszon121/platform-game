@@ -10,8 +10,10 @@ var jumps_left = 0
 var last_walljump_direction = 0
 var direction = 1
 var slow = 1
+var camera_limit = 0
 
 var on_ladder := false
+var should_have_wings := false
 
 const SPEED = 400
 const GRAVITY = 50
@@ -20,10 +22,15 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
+	print(position.x)
 	match state:
 		States.AIR:
 			if is_on_floor():
 				state = States.FLOOR
+				continue
+			if should_have_wings:
+				$Camera2D.limit_left = 0
+				state = States.FLY
 				continue
 			elif can_walljump():
 				if Input.is_action_pressed("ui_up") and ((Input.is_action_pressed("ui_left") and direction == 1) or (Input.is_action_pressed("ui_right") and direction == -1)):
@@ -112,6 +119,13 @@ func _physics_process(_delta):
 			velocity = move_and_slide(velocity, Vector2.UP)
 		
 		States.FLY:
+			if !should_have_wings:
+				camera_limit = 0
+				$Camera2D.limit_left = -1700
+				state = States.AIR
+				continue
+			camera_limit += 3
+			$Camera2D.limit_left = camera_limit
 			$Sprite.play("jump")
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
@@ -207,5 +221,5 @@ func snake_jump():
 	jumps_left = 1
 	velocity.y = JUMPFORCE * 1.2
 
-func _on_wings_checker_body_entered(body):
-	state = States.FLY
+func _on_Wings_animation_finished():
+	$Wings.play("default")

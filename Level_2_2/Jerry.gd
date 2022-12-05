@@ -4,4 +4,9 @@ func _ready():
 	$Jerry/Wings.visible = false
 
 func _on_wings_checker_body_entered(body):
-	$Jerry/Wings.visible = true
+	body.should_have_wings = !body.should_have_wings
+	if body.should_have_wings:
+		$Jerry/Wings.visible = true
+		#body.$Sprite.flip_h = false
+	else:
+		$Jerry/Wings.visible = false

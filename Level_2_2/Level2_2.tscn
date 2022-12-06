@@ -16,6 +16,7 @@
 [ext_resource path="res://ASSETS/player/wings/wing3.png" type="Texture" id=14]
 [ext_resource path="res://ASSETS/player/wings/wing4.png" type="Texture" id=15]
 [ext_resource path="res://ASSETS/player/wings/wing2.png" type="Texture" id=16]
+[ext_resource path="res://Level_2_2/wings_checker.gd" type="Script" id=17]
 
 [sub_resource type="TileSet" id=9]
 0/name = "tileYellow_04.png 0"
@@ -140,10 +141,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 2/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 71.5, 94 )
-
-[sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 32, 64 )
+extents = Vector2( 31.75, 1404 )
 
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 64, 32 )
@@ -196,23 +194,14 @@ format = 1
 [node name="wings_checker" type="Area2D" parent="StaticNodes"]
 position = Vector2( 1544, -1216 )
 collision_layer = 0
+script = ExtResource( 17 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticNodes/wings_checker"]
-position = Vector2( 0, 614 )
+position = Vector2( -39.75, 452 )
 shape = SubResource( 11 )
-
-[node name="wings_checker2" type="Area2D" parent="StaticNodes"]
-position = Vector2( 1440, 576 )
-collision_layer = 0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticNodes/wings_checker2"]
-shape = SubResource( 14 )
 
 [node name="wallblock" type="StaticBody2D" parent="StaticNodes"]
 position = Vector2( 1440, 576 )
@@ -271,6 +260,6 @@ drag_margin_right = 0.3
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Jerry/Jerry"]
 remote_path = NodePath("../Camera2D")
 
-[connection signal="body_entered" from="StaticNodes/wings_checker" to="Jerry" method="_on_wings_checker_body_entered"]
-[connection signal="body_entered" from="StaticNodes/wings_checker2" to="Jerry" method="_on_wings_checker_body_entered"]
+[connection signal="body_entered" from="StaticNodes/wings_checker" to="StaticNodes/wings_checker" method="_on_wings_checker_body_entered"]
+[connection signal="should_have_wings" from="StaticNodes/wings_checker" to="Jerry" method="_on_wings_checker_should_have_wings"]
 [connection signal="animation_finished" from="Jerry/Jerry/Wings" to="Jerry/Jerry" method="_on_Wings_animation_finished"]

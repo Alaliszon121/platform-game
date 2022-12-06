@@ -348,7 +348,7 @@ shape = SubResource( 29 )
 position = Vector2( 768, 64 )
 rotation = -1.5708
 scale = Vector2( 3.39318, 3.84517 )
-frame = 7
+frame = 2
 
 [node name="Sarcophagus" type="Area2D" parent="StaticNodes"]
 position = Vector2( 8768, -192 )
@@ -673,7 +673,7 @@ tile_data = PoolIntArray( 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0
 position = Vector2( 10544, -464 )
 rotation = -3.14159
 scale = Vector2( 5.41131, 4.62957 )
-frame = 7
+frame = 2
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_group_": true
@@ -708,7 +708,6 @@ disabled = true
 position = Vector2( 0, 3.05176e-05 )
 scale = Vector2( 2.05, 2.185 )
 frames = SubResource( 23 )
-frame = 2
 playing = true
 flip_h = true
 
@@ -723,7 +722,7 @@ shape = SubResource( 24 )
 [node name="mark" parent="NPCs/Pharaoh" instance=ExtResource( 37 )]
 position = Vector2( 0, -160 )
 scale = Vector2( 2.89062, 3.22396 )
-frame = 4
+frame = 1
 
 [node name="Mummy" type="StaticBody2D" parent="NPCs"]
 position = Vector2( 8584, 536 )
@@ -739,13 +738,13 @@ disabled = true
 position = Vector2( -274, 22 )
 scale = Vector2( 2.7623, 2.78034 )
 frames = SubResource( 25 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="mark" parent="NPCs/Mummy" instance=ExtResource( 37 )]
 position = Vector2( -272, -105 )
 scale = Vector2( 2.89062, 3.22396 )
-frame = 4
+frame = 1
 
 [node name="Area2D" type="Area2D" parent="NPCs/Mummy"]
 collision_layer = 0

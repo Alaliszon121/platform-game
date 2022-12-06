@@ -22,7 +22,7 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
-	print(position.x)
+	#print(direction)
 	match state:
 		States.AIR:
 			if is_on_floor():

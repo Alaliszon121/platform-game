@@ -20,13 +20,14 @@ motion_scale = Vector2( 0.5, 0.5 )
 motion_mirroring = Vector2( 3199, 2539 )
 
 [node name="Sprite" type="Sprite" parent="Clouds"]
-position = Vector2( 6, -1928 )
+position = Vector2( 6, -1701 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="Sea" type="ParallaxLayer" parent="."]
+visible = false
 motion_scale = Vector2( 0.52, 0.52 )
-motion_mirroring = Vector2( 3199, 2539 )
+motion_mirroring = Vector2( 3199, 4000 )
 
 [node name="Sprite" type="Sprite" parent="Sea"]
 position = Vector2( 6, -1928 )

@@ -456,7 +456,7 @@ shape = SubResource( 2 )
 position = Vector2( 1123, 28 )
 rotation = -1.5708
 scale = Vector2( 3.29284, 3.29284 )
-frame = 3
+frame = 4
 
 [node name="Sign1" parent="." instance=ExtResource( 18 )]
 position = Vector2( 563, 449 )
@@ -496,7 +496,7 @@ __meta__ = {
 [node name="Portal2" parent="." instance=ExtResource( 17 )]
 position = Vector2( 14078, -320 )
 scale = Vector2( 3.58849, 3.98594 )
-frame = 2
+frame = 3
 script = ExtResource( 27 )
 __meta__ = {
 "_edit_group_": true

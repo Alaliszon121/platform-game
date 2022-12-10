@@ -6,9 +6,10 @@ var coins = [0, 0, 0]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_game()
-	$Panel_levels/coins.text = var2str(coins[0])
+	$Panel_levels/coins.text = var2str(coins[0]) + "/14";
 	$Panel_levels/coins2.text = var2str(coins[1])
 	$Panel_levels/coins3.text = var2str(coins[2])
+	$Panel_level/coins.text = var2str(coins[0] + coins[1] + coins[2]) + "/50"
 
 func load_game():
 	var file = File.new()

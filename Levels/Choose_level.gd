@@ -7,11 +7,11 @@ onready var levels_path = [$Panel_level1/level1, $Panel_level2/level2, $Panel_le
 
 func _ready():
 	load_game()
-	$Panel_level1/coins.text = var2str(coins_array[0])
-	$Panel_level2/coins.text = var2str(coins_array[1])
-	$Panel_level3/coins.text = var2str(coins_array[2])
-	$Panel_level4/coins.text = var2str(coins_array[3])
-	$Panel_level5/coins.text = var2str(coins_array[4])
+	$Panel_level1/coins.text = var2str(coins_array[0]) + "/50"
+	$Panel_level2/coins.text = var2str(coins_array[1]) + "/50"
+	$Panel_level3/coins.text = var2str(coins_array[2]) + "/50"
+	$Panel_level4/coins.text = var2str(coins_array[3]) + "/50"
+	$Panel_level5/coins.text = var2str(coins_array[4]) + "/50"
 	for i in unlocked_levels:
 		levels_path[i].disabled = false
 	#	$Panel_level1/level1.disabled = false

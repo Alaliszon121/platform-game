@@ -180,9 +180,6 @@ func move_and_fall():
 	velocity.y = velocity.y + GRAVITY
 	velocity = move_and_slide(velocity, Vector2.UP)
 
-func _on_Area2D_body_entered(_body):
-	get_tree().change_scene("res://Level_1/Level1.tscn")
-
 func bounce():
 	velocity.y = JUMPFORCE * 0.7
 

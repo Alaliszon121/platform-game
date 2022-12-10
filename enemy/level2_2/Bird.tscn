@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ASSETS/enemies/level2_2/bird1.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/enemies/level2_2/bird2.png" type="Texture" id=2]
+[ext_resource path="res://enemy/level2_2/Bird.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 16.0
+height = 80.0
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 24.0
+height = 92.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 544, 670.5 )
+
+[node name="Bird" type="KinematicBody2D"]
+collision_layer = 16
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 3.8147e-06, 3.8147e-06 )
+scale = Vector2( 4.26667, 4.26667 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="sides_checker" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sides_checker"]
+position = Vector2( 0, 8 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="Immortality_timer" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
+[node name="player_checker" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_checker"]
+position = Vector2( -609.5, 32 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[connection signal="body_entered" from="sides_checker" to="." method="_on_sides_checker_body_entered"]
+[connection signal="timeout" from="Immortality_timer" to="." method="_on_Immortality_timer_timeout"]
+[connection signal="body_entered" from="player_checker" to="." method="_on_player_checker_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -22,7 +22,7 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
-	#print(direction)
+	#print(position.y)
 	match state:
 		States.AIR:
 			if is_on_floor():
@@ -30,6 +30,7 @@ func _physics_process(_delta):
 				continue
 			if should_have_wings:
 				$Camera2D.limit_left = 0
+				$Camera2D.limit_bottom = 0
 				state = States.FLY
 				continue
 			elif can_walljump():
@@ -122,11 +123,14 @@ func _physics_process(_delta):
 			if !should_have_wings:
 				camera_limit = 0
 				$Camera2D.limit_left = -1700
+				$Camera2D.limit_bottom = 800
 				state = States.AIR
 				continue
-			camera_limit += 3
+			camera_limit += 5
 			$Camera2D.limit_left = camera_limit
 			$Sprite.play("jump")
+			if (camera_limit - 800) > position.x:
+				get_tree().reload_current_scene()
 			if Input.is_action_pressed("ui_right"):
 				velocity.x = SPEED
 				$Sprite.flip_h = false
@@ -183,6 +187,8 @@ func bounce():
 	velocity.y = JUMPFORCE * 0.7
 
 func damaged(var posx):
+	#Input.action_release("ui_right")
+	#Input.action_release("ui_left")
 	set_modulate(Color(1,0.3,0.3,0.7))
 	$Timer.start()
 	set_collision_mask_bit(4, false)

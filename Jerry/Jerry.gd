@@ -10,6 +10,7 @@ var jumps_left = 0
 var last_walljump_direction = 0
 var direction = 1
 var slow = 1
+var wall_slow = 1
 var camera_limit = 0
 
 var on_ladder := false
@@ -22,7 +23,7 @@ const JUMPFORCE = -1300
 signal damaged
 
 func _physics_process(_delta):
-	#print(position.y)
+	#print(wall_slow)
 	match state:
 		States.AIR:
 			if is_on_floor():
@@ -33,7 +34,11 @@ func _physics_process(_delta):
 				$Camera2D.limit_bottom = 0
 				state = States.FLY
 				continue
-			elif can_walljump():
+			if is_near_wall():
+				wall_slow = 0.5
+			else:
+				wall_slow = 1
+			if can_walljump():
 				if Input.is_action_pressed("ui_up") and ((Input.is_action_pressed("ui_left") and direction == 1) or (Input.is_action_pressed("ui_right") and direction == -1)):
 					last_walljump_direction = direction
 					velocity.y = JUMPFORCE
@@ -53,7 +58,7 @@ func _physics_process(_delta):
 				velocity.y = JUMPFORCE * slow
 				jumps_left = 0
 			set_direction()
-			move_and_fall()
+			move_and_fall(wall_slow)
 			
 		States.FLOOR:
 			last_walljump_direction = 0
@@ -79,7 +84,7 @@ func _physics_process(_delta):
 				velocity.y = JUMPFORCE * slow
 				state = States.AIR
 			set_direction()
-			move_and_fall()
+			move_and_fall(wall_slow)
 			
 		States.DIALOGUE:
 			$Sprite.play("idle")
@@ -88,7 +93,7 @@ func _physics_process(_delta):
 			elif Input.is_action_pressed("ui_left"):
 				$Sprite.flip_h = true
 			velocity.x = lerp(velocity.x, 0, 0.2)
-			move_and_fall()
+			move_and_fall(wall_slow)
 			
 		States.LADDER:
 			if not on_ladder:
@@ -126,7 +131,7 @@ func _physics_process(_delta):
 				$Camera2D.limit_bottom = 800
 				state = States.AIR
 				continue
-			camera_limit += 5
+			camera_limit += 6
 			$Camera2D.limit_left = camera_limit
 			$Sprite.play("jump")
 			if (camera_limit - 800) > position.x:
@@ -148,7 +153,7 @@ func _physics_process(_delta):
 				$Wings.play("fly")
 				velocity.y = JUMPFORCE
 			set_direction()
-			move_and_fall()
+			move_and_fall(wall_slow)
 
 func can_climb():
 	if on_ladder and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down")):
@@ -176,8 +181,8 @@ func set_direction():
 		direction = 1
 	$Wallchecker.rotation_degrees = 90 * -direction
 
-func move_and_fall():
-	velocity.y = velocity.y + GRAVITY
+func move_and_fall(wall_slow):
+	velocity.y = velocity.y + GRAVITY * wall_slow
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func bounce():
